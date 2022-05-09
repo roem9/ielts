@@ -256,3 +256,37 @@
         $data = $CI->db->get()->result_array();
         return $data;
     }
+
+    // soal ielts 
+        function soal_isian_ielts($name){
+            return '<input type="text" class="ps-2 pe-2 form form-control form-control-flush form-autosize" style="background: #DBE7F6 !important;width: 50px;display: inline" name="'.$name.'">';
+        }
+
+        function soal_pg_ielts($data_soal){
+            return '
+                <div class="mb-4">
+                    <div class="mb-3">
+                        '.$data_soal['no'].') '.$data_soal['soal'].'
+                        <input type="text" name="'.$data_soal['name'].'">
+                    </div>
+                    '.pilihan_pg_ielts($data_soal).'
+                </div>
+            ';
+        }
+
+        function pilihan_pg_ielts($data_soal){
+            $data_pilihan = "";
+            foreach ($data_soal['pilihan'] as $pilihan) {
+                $data_pilihan .= '
+                    <div class="mb-3">
+                        <label>
+                            <input type="radio" data-id="'.$data_soal['name'].'" name="radio-'.$data_soal['no'].'" value="'.$pilihan.'"> 
+                            '.$pilihan.'
+                        </label>
+                    </div>
+                ';
+            }
+
+            return $data_pilihan;
+        }
+    // soal ielts 

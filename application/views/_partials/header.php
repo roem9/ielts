@@ -26,6 +26,9 @@
     <link href="<?= base_url()?>assets/mycss/style.css" rel="stylesheet"/>
     <script src="<?= base_url()?>assets/jquery/jquery-3.5.1.min.js"></script>
     <script src="<?= base_url()?>assets/jquery/sweetalert2@9.js"></script>
+    <script>
+      var url_base = "<?= base_url()?>"; 
+    </script>
   </head>
   <!-- <body class="antialiased" style="background-color: #265D5A"> -->
   <body class="antialiased" style="background-color: <?= $background['value']?>">

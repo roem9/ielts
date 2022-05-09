@@ -16,147 +16,63 @@ class Soal extends CI_Controller {
     }
 
     public function id($id_tes){
-        // $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes, "status" => "Berjalan"]);
-        $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
-
-        $data['background'] = $this->Main_model->get_one("config", ["field" => 'background']);
-        
         $data['link'] = $this->Main_model->get_one("config", ['field' => "web admin"]);
-        
-        if($tes['status'] == "Berjalan"){
-            // $data['cek'] = $this->Main_model->get_one("item_soal", ["id_item" => 7]);
+        $data['background'] = $this->Main_model->get_one("config", ["field" => 'background']);
+        $data['js'] = [
+            "ajax.js",
+            "function.js",
+            "helper.js",
+        ];
+
+        $data['tes'] = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        if($data['tes']){
+            $data['title'] = $data['tes']['nama_tes'];
             $data['id'] = $id_tes;
-
-            $soal = $this->Main_model->get_one("soal", ["id_soal" => $tes['id_soal']]);
-            $sesi = $this->Main_model->get_all("sesi_soal", ["id_soal" => $soal['id_soal']]);
-
-            if($soal['tipe_soal'] == "TOAFL" || $soal['tipe_soal'] == "TOEFL"){
-                $data['table'] = "peserta_toefl";
-                $data['form'] = "
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"text\" name=\"email\" class=\"form form-control required\">
-                        <label for=\"email\">Alamat Email</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"text\" name=\"nama\" class=\"form form-control required\">
-                        <label for=\"nama\">Nama Lengkap</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <select name=\"jk\" class=\"form form-control required\">
-                            <option value=\"\">Pilih Gender</option>
-                            <option value=\"Male\">Male</option>
-                            <option value=\"Female\">Female</option>
-                        </select>
-                        <label for=\"jk\">Gender</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"text\" name=\"no_wa\" class=\"form form-control required number\">
-                        <label for=\"no_wa\">No Whatsapp</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"text\" name=\"t4_lahir\" class=\"form form-control required\">
-                        <label for=\"t4_lahir\">Kota Lahir</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"date\" name=\"tgl_lahir\" class=\"form form-control required\">
-                        <label for=\"tgl_lahir\">Tgl Lahir</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <textarea name=\"alamat\" class=\"form form-control required\"></textarea>
-                        <label for=\"alamat\">Alamat</label>
-                    </div>
-                ";
-            } else {
-                $data['table'] = "peserta";
-                $data['form'] = "
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"text\" name=\"email\" class=\"form form-control required\">
-                        <label for=\"email\">Alamat Email</label>
-                    </div>
-                    <div class=\"form-floating mb-3\">
-                        <input type=\"text\" name=\"nama\" class=\"form form-control required\">
-                        <label for=\"nama\">Nama Lengkap</label>
-                    </div>";
-            }
-
-            $data['title'] = $tes['nama_tes'];
-            $data['tes'] = $tes;
-            $data['soal'] = $soal;
-            foreach ($sesi as $i => $sesi) {
-                $sub_soal = $this->Main_model->get_all("item_soal", ["id_sub" => $sesi['id_sub']], 'urutan');
-                $data['sesi'][$i] = [];
-                $number = 1;
-                foreach ($sub_soal as $j => $soal) {
-                    if($soal['item'] == "soal"){
-                        // from json to array 
-                        // $txt_soal = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $soal['data']), true );
-                        $string = trim(preg_replace('/\s+/', ' ', $soal['data']));
-                        // $txt_soal = json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $soal['data']), true );
-                        $txt_soal = json_decode($string, true );
-                        
-                        if($soal['penulisan'] == "RTL"){
-                            $no = $this->Other_model->angka_arab($number).". ";
-                            $txt_soal['soal'] = str_replace("{no}", $no, $txt_soal['soal']);
-                        } else {
-                            $no = $number.". ";
-                            $txt_soal['soal'] = str_replace("{no}", $no, $txt_soal['soal']);
-                        }
-
-                        $data['sesi'][$i]['soal'][$j]['id_item'] = $soal['id_item'];
-                        $data['sesi'][$i]['soal'][$j]['item'] = $soal['item'];
-                        $data['sesi'][$i]['soal'][$j]['data']['soal'] = $txt_soal['soal'];
-                        $data['sesi'][$i]['soal'][$j]['data']['pilihan'] = $txt_soal['pilihan'];
-                        $data['sesi'][$i]['soal'][$j]['data']['jawaban'] = $txt_soal['jawaban'];
-                        $data['sesi'][$i]['soal'][$j]['penulisan'] = $soal['penulisan'];
-                        
-                        $number++;
-
-                    } else if($soal['item'] == "petunjuk" || $soal['item'] == "audio"){
-                        $data['sesi'][$i]['soal'][$j] = $soal;
-                    }
-
-                    $data['sesi'][$i]['jumlah_soal'] = COUNT($this->Main_model->get_all("item_soal", ["id_sub" => $sesi['id_sub'], "item" => "soal"]));
-                    $data['sesi'][$i]['id_sub'] = $sesi['id_sub'];
-                }
-            }
-
-            // javascript 
-            $data['js'] = [
-                "ajax.js",
-                "function.js",
-                "helper.js",
-            ];
-
-            if($data['soal']['tipe_soal'] == "TOEFL"){
-                $this->load->view("pages/soal-toefl", $data);
-            } else {
-                $this->load->view("pages/soal", $data);
+    
+            if($data['tes']['tipe_soal'] == "Soal_002"){
+                $this->load->view("pages/soal-ielts-002", $data);
             }
         } else {
             $data['title'] = "Blank Link";
             $this->load->view("pages/blank", $data);
         }
-
     }
 
-    public function ielts(){
-        $data['title'] = "Soal IELTS";
+    public function writing($id_tes){
+
         $data['link'] = $this->Main_model->get_one("config", ['field' => "web admin"]);
         $data['background'] = $this->Main_model->get_one("config", ["field" => 'background']);
+        $data['js'] = [
+            "ajax.js",
+            "function.js",
+            "helper.js",
+        ];
 
-        $this->load->view("pages/soal-ielts", $data);
+        $data['tes'] = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        if($data['tes']){
+            $data['title'] = "Writing " . $data['tes']['nama_tes'];
+            $data['id'] = $id_tes;
+    
+            if($data['tes']['tipe_soal'] == "Soal_002"){
+                $this->load->view("pages/soal-ielts-writing-002", $data);
+            }
+        } else {
+            $data['title'] = "Blank Link";
+            $this->load->view("pages/blank", $data);
+        }
     }
 
-    public function email_check($table){
-        // $id_tes = $this->input->post("id");
-        // $email = $this->input->post("email");
-        // $data = $this->Main_model->get_one($table, ["email" => $email, 'md5(id_tes)' => $id_tes]);
-        // if($data) {
-        //     echo json_encode($data['email']);
-        // } else {
-        //     echo json_encode("");
-        // }
-        echo json_encode("");
+    public function cek_email(){
+        $id_tes = $this->input->post("id_tes");
+        $email = $this->input->post("email");
+        $data = $this->Main_model->get_one("peserta_ielts", ["email" => $email, 'md5(id_tes)' => $id_tes]);
+        if($data) {
+            echo json_encode(1);
+        } else {
+            echo json_encode(0);
+        }
     }
 
     public function password_check(){
@@ -465,6 +381,466 @@ class Soal extends CI_Controller {
         $data = $this->Main_model->get_all("config");
         return $data;
     }
+
+    public function add_jawaban_ielts(){
+        $jawaban_listening = [
+            [
+                "no" => 1,
+                "jawaban" => ["7.50"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["Park Square"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["Media"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["Weather"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["First Letter"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["social bonds"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["brains"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["sound"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["silent singing"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["feet"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["the playground", "playground"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["feedback"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["update"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["extra space"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["I"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["C. she had been inspired by a particular book"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["A. the effect of teacher discipline"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["B. girls were more negative about school than boys"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["A. teachers should be flexible in unpredictable ways"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["B. reflect on her own research experience in an interesting way"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["C. not be known for many, many years"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["A. an existing problem even worse"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["3", "three"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["Greenland"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["snow"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["freshwater"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["12", "twelve"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["cattle"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["time"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["expensive"],
+            ],
+        ];
+
+        $jawaban_reading = [
+            [
+                "no" => 1,
+                "jawaban" => ["VIII"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["I"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["VI"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["III"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["VII"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["IV"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["farming"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["sea mammals", "fish"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["sea mammals", "fish"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["thule"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["islands"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["nomadic"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["nature"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["imported"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["failure"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["garage"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["anatomy"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["puppets"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["special service"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["sword fight"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["C. 7.22"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["D. Exercise after breakfast"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["B. Taking supplements at breakfast"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["A. Mid-afternoon"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["D. Eat a light meal"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["C. To introduce chronobiology and describe some practical applications"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["oil content"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["fertilizer enhanced"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["centrifugation"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["flotation"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["destabilized"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["pulling"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["thicker"],
+            ],
+        ];
+
+        $jawaban_ietls = "";
+
+        $benar_listening = 0;
+        foreach ($_POST['jawaban_listening'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+            }
+
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_listening++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $benar_reading = 0;
+        foreach ($_POST['jawaban_reading'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+            }
+
+            if($i == 8){
+                if(strtolower($_POST['jawaban_reading'][7]) == 'sea mamals' && strtolower($_POST['jawaban_reading'][8]) == 'fish'){
+                    $jawaban_ietls .= 'Reading&&&sea mamals&&&Benar|||Reading&&&fish&&&Benar|||';
+                    $benar_reading = $benar_reading + 2;
+                } else if(strtolower($_POST['jawaban_reading'][7]) == 'fish' && strtolower($_POST['jawaban_reading'][8]) == 'sea mamals'){
+                    $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&sea mamals&&&Benar|||';
+                    $benar_reading = $benar_reading + 2;
+                } else if(strtolower($_POST['jawaban_reading'][7]) == 'fish'){
+                    $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
+                    $benar_reading++;
+                } else if(strtolower($_POST['jawaban_reading'][7]) == 'sea mamals'){
+                    $jawaban_ietls .= 'Reading&&&sea mamals&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
+                    $benar_reading++;
+                } else if(strtolower($_POST['jawaban_reading'][8]) == 'fish'){
+                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&fish&&&Benar|||';
+                    $benar_reading++;
+                } else if(strtolower($_POST['jawaban_reading'][8]) == 'sea mamals'){
+                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&sea mamals&&&Benar|||';
+                    $benar_reading++;
+                } else {
+                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
+                }
+            } else if($i != 7) {
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                    $status = "Benar";
+                    $benar_reading++;
+                } else {
+                    $status = "Salah";
+                }
+    
+                $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            }
+        }
+
+        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+
+        $id_tes = $this->input->post("id_tes");
+
+        $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+        $data = [
+            "id_tes" => $tes['id_tes'],
+            "first_name" => $this->input->post("first_name"),
+            "last_name" => $this->input->post("last_name"),
+            "email" => $this->input->post("email"),
+            "nilai_listening" => $benar_listening,
+            "nilai_reading" => $benar_reading,
+            "text_listening_reading" => $jawaban_ietls,
+            "text_writing" => " ||| ",
+        ];
+
+        $id = $this->Main_model->add_data("peserta_ielts", $data);
+
+        $replace_wa = array(
+            ' ' => '%20',
+            '"' => '%22'
+        );
+        $tgl_tes = date("d-M-Y", strtotime($tes['tgl_tes']));
+
+        $replacements = array(
+            '$first_name' => $this->input->post("first_name"),
+            '$last_name' => $this->input->post("last_name"),
+            '$email' => $this->input->post("email"),
+            '$benar_listening' => $benar_listening,
+            '$benar_reading' => $benar_reading,
+            '$tes' => $tes['nama_tes'],
+            '$tgl_tes' => tgl_indo($tes["tgl_tes"], "lengkap"),
+            '$tgl_pengumuman' => tgl_indo($tes["tgl_pengumuman"], "lengkap"),
+        );
+
+        $msg = str_replace(array_keys($replacements), $replacements, $tes['msg']);
+
+        $this->session->set_flashdata('pesan', $msg);
+
+        redirect(base_url("soal/id/".$id_tes), $data);
+    }
+
+    public function add_jawaban_ielts_writing(){
+        
+        $id_tes = $this->input->post("id_tes");
+        $email = $this->input->post("email");
+        $writing_text = $this->input->post("text_writing");
+        $text_writing = "";
+
+        foreach ($writing_text as $writing_text) {
+            $text_writing .= $writing_text . "|||";
+        }
+
+        $text_writing = substr($text_writing, 0, -3);
+
+        $peserta = $this->Main_model->get_one("peserta_ielts", ["md5(id_tes)" => $id_tes, "email" => $email]);
+
+        $data = [
+            "text_writing" => $text_writing
+        ];
+
+        $this->Main_model->edit_data("peserta_ielts", ["id" => $peserta['id']], $data);
+
+        $msg = "Terima kasih telah menyelesaikan IELTS Writing Prediction. Hasil IELTS Writing akan diproses untuk feedback oleh teachers TOP English";
+
+        $this->session->set_flashdata('pesan', $msg);
+
+        redirect(base_url("soal/writing/".$id_tes), $data);
+    }
+    
 }
 
 /* End of file Peserta.php */
