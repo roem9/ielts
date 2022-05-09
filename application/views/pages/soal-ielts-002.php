@@ -395,6 +395,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+                                                        
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_1_6" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -463,6 +468,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_7_14" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -520,6 +530,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_15_20" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -637,6 +652,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_21_27" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -762,6 +782,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_28_33" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -876,6 +901,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_34_36" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -927,6 +957,11 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <a href="#soal_37_40" class="btn btn-success" data-bs-toggle="modal">Note</a>
+                                                        </div>
+
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -964,6 +999,139 @@
             </div>
         </div>
     </form>
+
+    <div class="modal modal-blur fade" id="soal_1_6" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 1-6</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="modal modal-blur fade" id="soal_7_14" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 7-14</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="modal modal-blur fade" id="soal_15_20" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 15-20</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-blur fade" id="soal_21_27" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 21-27</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-blur fade" id="soal_28_33" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 28-33</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-blur fade" id="soal_34_36" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 34-36</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-blur fade" id="soal_37_40" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Note 37-40</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php  
         if(isset($js)) :

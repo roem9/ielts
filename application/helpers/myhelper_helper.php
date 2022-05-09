@@ -267,7 +267,7 @@
                 <div class="mb-4">
                     <div class="mb-3">
                         '.$data_soal['no'].') '.$data_soal['soal'].'
-                        <input type="text" name="'.$data_soal['name'].'">
+                        <input type="hidden" name="'.$data_soal['name'].'">
                     </div>
                     '.pilihan_pg_ielts($data_soal).'
                 </div>
