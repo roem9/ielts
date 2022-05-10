@@ -91,6 +91,17 @@
                             <input type="hidden" name="id_tes" value="<?= $id?>">
 
                             <div class="sesi-listening" style="display:none">
+                                <div class="shadow card mb-3">
+                                    <div class="card-body">
+                                        <center>
+                                            <audio id="audio-1" class="audio" data-id="1"><source src="<?= base_url('assets/myaudio/listening-002.mp3?t='.time())?>" type="audio/mpeg"></audio>
+                                            <progress id="seekbar-1" value="0" max="1" style="width:100%;"></progress><br>
+                                            <button class="btn btn-success btnAudio" data-id="1" type="button"><?= tablerIcon("player-play", "")?> play</button>
+                                            <p><small class="text-danger"><i>note : perhatian, audio hanya dapat diputar satu kali</i></small></p>
+                                        </center>
+                                    </div>
+                                </div>
+
                                 <div class="shadow card mb-3 soal">
                                     <div class="card-body ps-4">
                                         <center><b>IELTS LISTENING</b></center>
@@ -1133,6 +1144,17 @@
         </div>
     </div>
 
+    
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+        </div>
+    </div>
+
     <?php  
         if(isset($js)) :
             foreach ($js as $i => $js) :?>
@@ -1389,5 +1411,26 @@
         $( this ).toggleClass( "highlight" );
         return false;
     });
+
+    // audio
+        $('.audio').on('timeupdate', function() {
+            let id = $(this).data("id");
+            $('#seekbar-'+id).attr("value", this.currentTime / this.duration);
+        });
+
+        $(".btnAudio").click(function(){
+            id = $(this).data("id");
+            $("#audio-"+id)[0].play();
+            $(this).hide();
+        })
+
+        document.addEventListener('play', function(e){  
+            var audios = document.getElementsByTagName('audio');  
+            for(var i = 0, len = audios.length; i < len;i++){  
+                if(audios[i] != e.target){  
+                    audios[i].pause();  
+                }  
+            }  
+        }, true);
 
 </script>
