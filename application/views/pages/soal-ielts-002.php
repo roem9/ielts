@@ -9,6 +9,9 @@
                             <a href="javascript:void()"><img src="<?= base_url()?>/assets/img/topenglish.png" height="80" alt=""></a>
                         </div> -->
                         <?php if( $this->session->flashdata('pesan') ) : ?>
+                            <div class="text-center mb-4">
+                                <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
+                            </div>
                             <?= $this->session->flashdata('pesan')?>
                         <?php else: ?>
                             <img src="<?= base_url()?>assets/img/poster.jpeg" alt="">
@@ -46,7 +49,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center mb-4">
-                            <a href="javascript:void()"><img src="<?= $link['value']?>/assets/img/logo.png" height="80" alt=""></a>
+                            <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
                         </div>
                         <center>
                             <p><b>SESI 1 : LISTENING</b></p>
@@ -66,7 +69,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center mb-4">
-                            <a href="javascript:void()"><img src="<?= $link['value']?>/assets/img/logo.png" height="80" alt=""></a>
+                            <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
                         </div>
                         <center>
                             <p><b>SESI 2 : READING</b></p>
@@ -85,7 +88,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center mb-4">
-                            <a href="javascript:void()"><img src="<?= $link['value']?>/assets/img/logo.png" height="80" alt=""></a>
+                            <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
                         </div>
                         <center>
                             <p><b>SESI 3 : WRITING</b></p>
