@@ -685,7 +685,7 @@ class Soal extends CI_Controller {
             ],
             [
                 "no" => 35,
-                "jawaban" => ["fertilizer enhanced"],
+                "jawaban" => ["fertiliser enhanced"],
             ],
             [
                 "no" => 36,
@@ -693,7 +693,7 @@ class Soal extends CI_Controller {
             ],
             [
                 "no" => 37,
-                "jawaban" => ["flotation"],
+                "jawaban" => ["floatation"],
             ],
             [
                 "no" => 38,
@@ -776,6 +776,16 @@ class Soal extends CI_Controller {
         $id_tes = $this->input->post("id_tes");
 
         $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        $writing_text = $this->input->post("text_writing");
+        $text_writing = "";
+
+        foreach ($writing_text as $writing_text) {
+            $text_writing .= $writing_text . "|||";
+        }
+
+        $text_writing = substr($text_writing, 0, -3);
+        
         $data = [
             "id_tes" => $tes['id_tes'],
             "first_name" => $this->input->post("first_name"),
@@ -784,7 +794,7 @@ class Soal extends CI_Controller {
             "nilai_listening" => $benar_listening,
             "nilai_reading" => $benar_reading,
             "text_listening_reading" => $jawaban_ietls,
-            "text_writing" => " ||| ",
+            "text_writing" => $text_writing
         ];
 
         $id = $this->Main_model->add_data("peserta_ielts", $data);
@@ -807,6 +817,8 @@ class Soal extends CI_Controller {
         );
 
         $msg = str_replace(array_keys($replacements), $replacements, $tes['msg']);
+
+        // $msg = 'Thank you for submitting your answer. Your answer will be assessed by our teacher and the report will be processed after three days';
 
         $this->session->set_flashdata('pesan', $msg);
 

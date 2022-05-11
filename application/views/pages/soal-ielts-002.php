@@ -80,6 +80,27 @@
             </div>
         </div>
 
+        <div class="page page-center" id="transisi-sesi-3" style="display: none">
+            <div class="container-tight py-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center mb-4">
+                            <a href="javascript:void()"><img src="<?= $link['value']?>/assets/img/logo.png" height="80" alt=""></a>
+                        </div>
+                        <center>
+                            <p><b>SESI 3 : WRITING</b></p>
+                            <p><i>Waktu Pengerjaan 65 Menit</i></p>
+                        </center>
+                        <div class="form-footer">
+                            <button type="button" class="btn btn-primary w-100 btnWriting">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         <div id="soal_tes" style="display: none">
             <div class="wrapper" id="elementtoScrollToID">
                 <div class="sticky-top">
@@ -406,10 +427,7 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
-                                                        
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_1_6" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
+                                                    
 
                                                         <?= $text?>
                                                     </div>
@@ -480,10 +498,6 @@
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
 
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_7_14" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
-
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -541,10 +555,6 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
-
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_15_20" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
 
                                                         <?= $text?>
                                                     </div>
@@ -663,10 +673,6 @@
                                             <div class="col-7">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
-
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_21_27" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
 
                                                         <?= $text?>
                                                     </div>
@@ -794,10 +800,6 @@
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
 
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_28_33" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
-
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -913,10 +915,6 @@
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
 
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_34_36" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
-
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -969,10 +967,6 @@
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
 
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="#soal_37_40" class="btn btn-success" data-bs-toggle="modal">Note</a>
-                                                        </div>
-
                                                         <?= $text?>
                                                     </div>
                                                 </div>
@@ -1000,6 +994,66 @@
                                 </div>
 
                                 <div class="d-flex justify-content-end">
+                                    <a href="javascript:void(0)" class="btn btn-success btnTransisiTiga">Next<?= tablerIcon("arrow-narrow-right", "me-0")?></a>
+                                </div>
+                            </div>
+
+                            <div class="sesi-writing" style="display:none">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <p class="question mb-3">
+                                            Writing Task 1
+                                        </p>
+
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <b>The diagram below shows the process for recycling plastic bottles.</b>
+                                                    </p>
+                                                    <p>
+                                                        <i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <div class="">
+                                            <center>
+                                                <img src="<?= base_url()?>assets/img/writing-002.jpg" alt="" height="550px">
+                                            </center>
+                                        </div>
+
+                                        <span>Type your answer here</span>
+                                        <textarea class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <p class="question mb-3">
+                                            Writing Task 2
+                                        </p>
+
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <i>Some people claim that too much focus and resources have been spent to protect wild animals and birds. </i>
+                                                    </p>
+                                                    <p>
+                                                        <i>To what extent do you agree or disagree?</i>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <span>Type your answer here</span>
+                                        <textarea class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-end">
                                     <a href="javascript:void(0)" class="btn btn-primary btnSimpan">Save</a>
                                 </div>
                             </div>
@@ -1010,139 +1064,6 @@
             </div>
         </div>
     </form>
-
-    <div class="modal modal-blur fade" id="soal_1_6" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 1-6</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <div class="modal modal-blur fade" id="soal_7_14" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 7-14</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <div class="modal modal-blur fade" id="soal_15_20" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 15-20</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal modal-blur fade" id="soal_21_27" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 21-27</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal modal-blur fade" id="soal_28_33" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 28-33</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal modal-blur fade" id="soal_34_36" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 34-36</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal modal-blur fade" id="soal_37_40" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Note 37-40</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <textarea class="form-control mb-3" name="" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn me-auto mr-3" data-bs-dismiss="modal">Tutup</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <?php  
         if(isset($js)) :
@@ -1202,7 +1123,7 @@
     $(".btnTransisiDua").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin telat mengakhiri sesi ini?',
+            html: 'Yakin telah mengakhiri sesi ini?',
             showCloseButton: true,
             showCancelButton: true,
             confirmButtonText: 'Ya',
@@ -1211,6 +1132,35 @@
             if (result.value) {
                 $("#soal_tes").hide();
                 $("#transisi-sesi-2").show();
+
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $("#elementtoScrollToID").offset().top
+                    }, 1000);
+                }
+
+                var audios = document.getElementsByTagName('audio');  
+                for(var i = 0, len = audios.length; i < len;i++){  
+                    if(audios[i]){  
+                        audios[i].pause();  
+                    }  
+                }
+            }
+        })
+    })
+
+    $(".btnTransisiTiga").click(function(){
+        Swal.fire({
+            icon: 'question',
+            html: 'Yakin telah mengakhiri sesi ini?',
+            showCloseButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Ya',
+            cancelButtonText: 'Tidak'
+        }).then(function (result) {
+            if (result.value) {
+                $("#soal_tes").hide();
+                $("#transisi-sesi-3").show();
 
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     $([document.documentElement, document.body]).animate({
@@ -1285,6 +1235,43 @@
                 countDown = setInterval(function () {
                     'use strict';
                     secpass("sesi-reading");
+                }, 1000);
+            }
+        })
+    })
+
+    $(".btnWriting").click(function(){
+        Swal.fire({
+            icon: 'question',
+            html: 'Yakin akan memulai sesi ini?',
+            showCloseButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Ya',
+            cancelButtonText: 'Tidak'
+        }).then(function (result) {
+            if (result.value) {
+                $("#transisi-sesi-3").hide();
+                $("#soal_tes").show();
+                $(".sesi-listening").hide();
+                $(".sesi-reading").hide();
+                $(".sesi-writing").show();
+        
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    $([document.documentElement, document.body]).animate({
+                        scrollTop: $("#elementtoScrollToID").offset().top
+                    }, 1000);
+                }
+        
+                clearInterval(countDown);
+
+                sec = 65 * 60;
+                // sec = 40;
+        
+                countDiv = document.getElementById("waktu"),
+                secpass,
+                countDown = setInterval(function () {
+                    'use strict';
+                    secpass("sesi-writing");
                 }, 1000);
             }
         })
@@ -1421,5 +1408,27 @@
                 }  
             }  
         }, true);
+    // audio 
+
+    $("textarea").keydown(function(e) {
+        if(e.keyCode === 9) { // tab was pressed
+            // get caret position/selection
+            var start = this.selectionStart;
+                end = this.selectionEnd;
+
+            var $this = $(this);
+
+            // set textarea value to: text before caret + tab + text after caret
+            $this.val($this.val().substring(0, start)
+                        + "\t"
+                        + $this.val().substring(end));
+
+            // put caret at right position again
+            this.selectionStart = this.selectionEnd = start + 1;
+
+            // prevent the focus lose
+            return false;
+        }
+    });
 
 </script>
