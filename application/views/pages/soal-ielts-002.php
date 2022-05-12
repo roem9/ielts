@@ -756,7 +756,7 @@
         
                                                             foreach ($data_soal_21_27 as $data_soal) :?>
                                                                 <?= soal_pg_ielts($data_soal);?>
-                                                        <?php endforeach;?>
+                                                            <?php endforeach;?>
         
                                                     </div>
                                                 </div>
