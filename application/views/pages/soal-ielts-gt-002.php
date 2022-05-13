@@ -331,25 +331,25 @@
                                                     "no" => 24, 
                                                     "soal" => "Janice thinks that employers should encourage workers who are",
                                                     "pilihan" => ["A. potential leaders.", "B. open to new ideas.","C. good at teamwork."],
-                                                    "name" => "soal_listening[23]"
+                                                    "name" => "jawaban_listening[23]"
                                                 ],
                                                 [ 
                                                     "no" => 25, 
                                                     "soal" => "Janice suggests that managers may find it difficult to",
                                                     "pilihan" => ["A. form successful groups.", "B. balance conflicting needs.","C. deal with uncooperative workers."],
-                                                    "name" => "soal_listening[24]"
+                                                    "name" => "jawaban_listening[24]"
                                                 ],
                                                 [ 
                                                     "no" => 26, 
                                                     "soal" => "Janice believes employers should look for job applicants who",
                                                     "pilihan" => ["A. can think independently.", "B. will obey the system.","C. can solve problems."],
-                                                    "name" => "soal_listening[25]"
+                                                    "name" => "jawaban_listening[25]"
                                                 ],
                                                 [ 
                                                     "no" => 27, 
                                                     "soal" => "Janice believes managers should",
                                                     "pilihan" => ["A. demonstrate good behaviour.", "B. encourage co-operation early on.","C. increase financial incentives."],
-                                                    "name" => "soal_listening[26]"
+                                                    "name" => "jawaban_listening[26]"
                                                 ],
                                             ];
                                         ?>
