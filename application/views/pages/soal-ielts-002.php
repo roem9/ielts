@@ -52,9 +52,8 @@
                             <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
                         </div>
                         <center>
-                            <p><b>SESI 1 : LISTENING</b></p>
-                            <p><i>Audio untuk tes hanya dapat diputar 1 (satu) kali.</i></p>
-                            <p><i>Waktu Pengerjaan 40 Menit</i></p>
+                            <p><b>First Session : LISTENING</b></p>
+                            <p><i>Time : 40 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnListening" >Start</button>
@@ -72,8 +71,8 @@
                             <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
                         </div>
                         <center>
-                            <p><b>SESI 2 : READING</b></p>
-                            <p><i>Waktu Pengerjaan 70 Menit</i></p>
+                            <p><b>Second Session : READING</b></p>
+                            <p><i>Time : 70 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnReading">Start</button>
@@ -91,8 +90,8 @@
                             <a href="javascript:void()"><img src="<?= base_url().'/assets/img/topenglish.png'?>" height="80" alt=""></a>
                         </div>
                         <center>
-                            <p><b>SESI 3 : WRITING</b></p>
-                            <p><i>Waktu Pengerjaan 65 Menit</i></p>
+                            <p><b>Third Session : WRITING</b></p>
+                            <p><i>Time : 65 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnWriting">Start</button>
@@ -1126,11 +1125,11 @@
     $(".btnTransisiDua").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin telah mengakhiri sesi ini?',
+            html: 'Once you close, you cannot open the previous section',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
                 $("#soal_tes").hide();
@@ -1155,11 +1154,11 @@
     $(".btnTransisiTiga").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin telah mengakhiri sesi ini?',
+            html: 'Once you close, you cannot open the previous section',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
                 $("#soal_tes").hide();
@@ -1177,11 +1176,11 @@
     $(".btnListening").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin akan memulai sesi ini?',
+            html: 'Start the session now?',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
                 $("#transisi-sesi-1").hide();
@@ -1210,11 +1209,11 @@
     $(".btnReading").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin akan memulai sesi ini?',
+            html: 'Start the session now?',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
                 $("#transisi-sesi-2").hide();
@@ -1246,11 +1245,11 @@
     $(".btnWriting").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin akan memulai sesi ini?',
+            html: 'Start the session now?',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
                 $("#transisi-sesi-3").hide();
@@ -1283,15 +1282,15 @@
     $(".btnSimpan").click(function(){
         Swal.fire({
             icon: 'question',
-            html: 'Yakin telah menyelesaikan tes Anda?',
+            html: 'Finish the test?',
             showCloseButton: true,
             showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
                 swal.fire({
-                    html: '<h4>Menyimpan Jawaban Anda ...</h4>',
+                    html: '<h4>Submit your answer ...</h4>',
                     allowOutsideClick: false,
                     showConfirmButton: false,
                     onBeforeOpen: () => {
@@ -1299,7 +1298,7 @@
                     },
                 });
 
-                $(".btnSimpan").html("Menyimpan...");
+                $(".btnSimpan").html("Svaing...");
                 $(".btnSimpan").prop("disabled", true);
                 $("#formIelts").submit()
             }
@@ -1359,7 +1358,7 @@
 
                 swal.fire({
                     title: 'Waktu Anda Telah Habis',
-                    html: '<h4>Menyimpan Jawaban Anda ...</h4>',
+                    html: '<h4>Submit your answer ...</h4>',
                     allowOutsideClick: false,
                     showConfirmButton: false,
                     onBeforeOpen: () => {
@@ -1367,7 +1366,7 @@
                     },
                 });
 
-                $(".btnSimpan").html("Menyimpan...");
+                $(".btnSimpan").html("Svaing...");
                 $(".btnSimpan").prop("disabled", true);
                 $(".btnBack").prop("disabled", true);
                 $("#formIelts").submit()
