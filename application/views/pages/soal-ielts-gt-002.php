@@ -103,7 +103,7 @@
 
 
 
-        <div id="soal_tes" style="display: nones">
+        <div id="soal_tes" style="display: none">
             <div class="wrapper" id="elementtoScrollToID">
                 <div class="sticky-top">
                     <?php $this->load->view("_partials/navbar-header")?>
@@ -113,7 +113,7 @@
                         <div class="container-xl">
                             <input type="hidden" name="id_tes" value="<?= $id?>">
 
-                            <div class="sesi-listening" style="display:nones">
+                            <div class="sesi-listening" style="display:none">
                                 <div class="shadow card mb-3">
                                     <div class="card-body">
                                         <center>
@@ -433,7 +433,7 @@
                                 </div>
                             </div>
 
-                            <div class="sesi-reading" style="display:nones">
+                            <div class="sesi-reading" style="display:none">
                                 <div class="shadow card mb-3">
                                     <div class="card-body ps-4">
                                         <p class="question">
