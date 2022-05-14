@@ -486,7 +486,7 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 10,
-                "jawaban" => ["3303845020456873", "3303 8450 2045 6873"]
+                "jawaban" => ["3303845020456873"]
             ],
             [
                 "no" => 11,
@@ -617,7 +617,7 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 2,
-                "jawaban" => ["28,33","28, 33", "28 and 33"],
+                "jawaban" => ["2833","3328"],
             ],
             [
                 "no" => 3,
@@ -637,7 +637,7 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 7,
-                "jawaban" => ["A,E", "A, E", "A and E"],
+                "jawaban" => ["AE", "EA"],
             ],
             [
                 "no" => 8,
@@ -673,27 +673,27 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 16,
-                "jawaban" => ["C"],
+                "jawaban" => ["C. a place to live only."],
             ],
             [
                 "no" => 17,
-                "jawaban" => ["B"],
+                "jawaban" => ["B. not allowed in University housing"],
             ],
             [
                 "no" => 18,
-                "jawaban" => ["A"],
+                "jawaban" => ["A. full-time students only"],
             ],
             [
                 "no" => 19,
-                "jawaban" => ["B"],
+                "jawaban" => ["B. plentiful"],
             ],
             [
                 "no" => 20,
-                "jawaban" => ["$68.50", "68.50", "68.50 dollars"],
+                "jawaban" => ["$68.50"],
             ],
             [
                 "no" => 21,
-                "jawaban" => ["$154", "154", "154 dollars"],
+                "jawaban" => ["$154"],
             ],
             [
                 "no" => 22,
@@ -741,15 +741,15 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 33,
-                "jawaban" => ["TRUE"],
+                "jawaban" => ["Science"],
             ],
             [
                 "no" => 34,
-                "jawaban" => ["NOT GIVEN"],
+                "jawaban" => ["TRUE"],
             ],
             [
                 "no" => 35,
-                "jawaban" => ["FALSE"],
+                "jawaban" => ["NOT GIVEN"],
             ],
             [
                 "no" => 36,

@@ -120,7 +120,7 @@
                                             <audio id="audio-1" class="audio" data-id="1"><source src="<?= base_url('assets/myaudio/listening-gt-002.mp3?t='.time())?>" type="audio/mpeg"></audio>
                                             <progress id="seekbar-1" value="0" max="1" style="width:100%;"></progress><br>
                                             <button class="btn btn-success btnAudio" data-id="1" type="button"><?= tablerIcon("player-play", "")?> play</button>
-                                            <p><small class="text-danger"><i>note : perhatian, audio hanya dapat diputar satu kali</i></small></p>
+                                            <p><small class="text-danger"><i>note : note : The audio can only be played once</i></small></p>
                                         </center>
                                     </div>
                                 </div>
@@ -1008,7 +1008,7 @@
             } else {
                 $("#login").hide();
                 $("#transisi-sesi-1").show();
-        
+
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     $([document.documentElement, document.body]).animate({
                         scrollTop: $("#elementtoScrollToID").offset().top
@@ -1029,6 +1029,8 @@
             cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
+                clearInterval(countDown);
+
                 $("#soal_tes").hide();
                 $("#transisi-sesi-2").show();
 
@@ -1058,6 +1060,8 @@
             cancelButtonText: 'No'
         }).then(function (result) {
             if (result.value) {
+                clearInterval(countDown);
+
                 $("#soal_tes").hide();
                 $("#transisi-sesi-3").show();
 
@@ -1090,8 +1094,10 @@
                     }, 1000);
                 }
         
-                sec = 40 * 60;
-                // sec = 30;
+                // clearInterval(countDown);
+                
+                // sec = 40 * 60;
+                sec = 30;
         
                 countDiv = document.getElementById("waktu"),
                 secpass,
@@ -1126,8 +1132,8 @@
         
                 clearInterval(countDown);
 
-                sec = 70 * 60;
-                // sec = 40;
+                // sec = 70 * 60;
+                sec = 40;
         
                 countDiv = document.getElementById("waktu"),
                 secpass,
@@ -1163,8 +1169,8 @@
         
                 clearInterval(countDown);
 
-                sec = 65 * 60;
-                // sec = 40;
+                // sec = 65 * 60;
+                sec = 40;
         
                 countDiv = document.getElementById("waktu"),
                 secpass,
@@ -1229,7 +1235,7 @@
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Waktu Anda telah habis untuk mengerjakan soal listening',
+                    text: 'Time out',
                     allowOutsideClick: false,
                 }).then(function (result) {
                     
@@ -1243,7 +1249,26 @@
                     }
                     
                 })
-            } else {
+            } else if(id == 'sesi-reading'){
+                clearInterval(countDown);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Time out',
+                    allowOutsideClick: false,
+                }).then(function (result) {
+                    
+                    $("#soal_tes").hide();
+                    $("#transisi-sesi-3").show();
+
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        $([document.documentElement, document.body]).animate({
+                            scrollTop: $("#elementtoScrollToID").offset().top
+                        }, 1000);
+                    }
+                    
+                })
+            } else if(id == 'sesi-writing'){
                 clearInterval(countDown);
 
                 // scroll to top 
@@ -1254,7 +1279,7 @@
                 }
 
                 swal.fire({
-                    title: 'Waktu Anda Telah Habis',
+                    title: 'Time out',
                     html: '<h4>Submit your answer ...</h4>',
                     allowOutsideClick: false,
                     showConfirmButton: false,
