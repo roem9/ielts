@@ -1199,8 +1199,8 @@
         
                 // clearInterval(countDown);
                 
-                // sec = 40 * 60;
-                sec = 30;
+                sec = 40 * 60;
+                // sec = 30;
         
                 countDiv = document.getElementById("waktu"),
                 secpass,
@@ -1235,8 +1235,8 @@
         
                 clearInterval(countDown);
 
-                // sec = 70 * 60;
-                sec = 40;
+                sec = 70 * 60;
+                // sec = 40;
         
                 countDiv = document.getElementById("waktu"),
                 secpass,
@@ -1272,8 +1272,8 @@
         
                 clearInterval(countDown);
 
-                // sec = 65 * 60;
-                sec = 40;
+                sec = 65 * 60;
+                // sec = 40;
         
                 countDiv = document.getElementById("waktu"),
                 secpass,
