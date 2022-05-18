@@ -486,7 +486,7 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 10,
-                "jawaban" => ["3303845020456873"]
+                "jawaban" => ["3303845020456837"]
             ],
             [
                 "no" => 11,

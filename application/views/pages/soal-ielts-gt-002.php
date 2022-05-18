@@ -53,7 +53,7 @@
                         </div>
                         <center>
                             <p><b>First Session : LISTENING</b></p>
-                            <p><i>Time : 40 Minutes</i></p>
+                            <p><i>Time : 45 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnListening" >Start</button>
@@ -120,7 +120,7 @@
                                             <audio id="audio-1" class="audio" data-id="1"><source src="<?= base_url('assets/myaudio/listening-gt-002.mp3?t='.time())?>" type="audio/mpeg"></audio>
                                             <progress id="seekbar-1" value="0" max="1" style="width:100%;"></progress><br>
                                             <button class="btn btn-success btnAudio" data-id="1" type="button"><?= tablerIcon("player-play", "")?> play</button>
-                                            <p><small class="text-danger"><i>note : note : The audio can only be played once</i></small></p>
+                                            <p><small class="text-danger"><i>note : The audio can only be played once</i></small></p>
                                         </center>
                                     </div>
                                 </div>
@@ -1096,7 +1096,7 @@
         
                 // clearInterval(countDown);
                 
-                sec = 40 * 60;
+                sec = 45 * 60;
                 // sec = 30;
         
                 countDiv = document.getElementById("waktu"),

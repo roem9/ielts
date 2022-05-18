@@ -53,7 +53,7 @@
                         </div>
                         <center>
                             <p><b>First Session : LISTENING</b></p>
-                            <p><i>Time : 40 Minutes</i></p>
+                            <p><i>Time : 45 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnListening" >Start</button>
@@ -1199,7 +1199,7 @@
         
                 // clearInterval(countDown);
                 
-                sec = 40 * 60;
+                sec = 45 * 60;
                 // sec = 30;
         
                 countDiv = document.getElementById("waktu"),
