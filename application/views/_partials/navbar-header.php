@@ -6,9 +6,9 @@
             </a>
         </h1>
         <div class="navbar-nav flex-row order-md-last">
-            <div class="nav-item dropdown d-md-flex ">
+            <div class="nav-item dropdown d-md-flex " style="font-size: 30px">
                 <div>
-                    <svg width="20" height="20">
+                    <svg width="30" height="30">
                         <use xlink:href="<?= base_url()?>assets/tabler-icons-1.39.1/tabler-sprite.svg#tabler-alarm" />
                     </svg>
                         <b><span id="waktu">&#8734;</span></b>

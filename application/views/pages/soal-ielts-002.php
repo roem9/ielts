@@ -72,7 +72,7 @@
                         </div>
                         <center>
                             <p><b>Second Session : READING</b></p>
-                            <p><i>Time : 70 Minutes</i></p>
+                            <p><i>Time : 60 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnReading">Start</button>
@@ -91,7 +91,7 @@
                         </div>
                         <center>
                             <p><b>Third Session : WRITING</b></p>
-                            <p><i>Time : 65 Minutes</i></p>
+                            <p><i>Time : 60 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnWriting">Start</button>
@@ -1235,7 +1235,7 @@
         
                 clearInterval(countDown);
 
-                sec = 70 * 60;
+                sec = 60 * 60;
                 // sec = 40;
         
                 countDiv = document.getElementById("waktu"),
@@ -1272,7 +1272,7 @@
         
                 clearInterval(countDown);
 
-                sec = 65 * 60;
+                sec = 60 * 60;
                 // sec = 40;
         
                 countDiv = document.getElementById("waktu"),

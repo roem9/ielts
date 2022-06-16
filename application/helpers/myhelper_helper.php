@@ -289,4 +289,8 @@
 
             return $data_pilihan;
         }
+
+        function arrowIcon(){
+            return '<center>'.tablerIcon("arrow-narrow-down", "mb-1 mt-1").'</center>';
+        }
     // soal ielts 

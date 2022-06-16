@@ -53,7 +53,7 @@
                         </div>
                         <center>
                             <p><b>First Session : LISTENING</b></p>
-                            <p><i>Time : 45 Minutes</i></p>
+                            <p><i>Time : 40 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnListening" >Start</button>
@@ -72,7 +72,7 @@
                         </div>
                         <center>
                             <p><b>Second Session : READING</b></p>
-                            <p><i>Time : 70 Minutes</i></p>
+                            <p><i>Time : 60 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnReading">Start</button>
@@ -91,7 +91,7 @@
                         </div>
                         <center>
                             <p><b>Third Session : WRITING</b></p>
-                            <p><i>Time : 65 Minutes</i></p>
+                            <p><i>Time : 60 Minutes</i></p>
                         </center>
                         <div class="form-footer">
                             <button type="button" class="btn btn-primary w-100 btnWriting">Start</button>
@@ -931,7 +931,8 @@
                                         <p>Dear _______,</p>
 
                                         <span>Type your answer here</span>
-                                        <textarea class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <textarea id="textarea-1" class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <center>Total word Count : <span id="count-textarea-1">0</span> words. Words left : <span id="count-left-1">150</span></center>
                                     </div>
                                 </div>
 
@@ -948,7 +949,8 @@
                                         <p>You should write at least 250 words.</p>
 
                                         <span>Type your answer here</span>
-                                        <textarea class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <textarea id="textarea-2" class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <center>Total word Count : <span id="count-textarea-2">0</span> words. Words left : <span id="count-left-2">250</span></center>
                                     </div>
                                 </div>
 
@@ -976,6 +978,32 @@
 <?php $this->load->view("_partials/footer")?>
 
 <script>
+    $("#textarea-1").on('keyup', function(e) {
+        var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
+        if (words <= 150) {
+            $('#count-textarea-1').text(words);
+            $('#count-left-1').text(150-words)
+        }else{
+            // Split the string on first 200 words and rejoin on spaces
+            var trimmed = $(this).val().split(/\s+/, 150).join(" ");
+            // Add a space at the end to keep new typing making new words
+            $(this).val(trimmed + " ");
+        }
+    });
+
+    $("#textarea-2").on('keyup', function(e) {
+        var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
+        if (words <= 250) {
+            $('#count-textarea-2').text(words);
+            $('#count-left-2').text(250-words)
+        }else{
+            // Split the string on first 200 words and rejoin on spaces
+            var trimmed = $(this).val().split(/\s+/, 250).join(" ");
+            // Add a space at the end to keep new typing making new words
+            $(this).val(trimmed + " ");
+        }
+    });
+    
     $('.form-autosize').on('input', function () {
         this.style.width = '60px';
             
@@ -1096,7 +1124,7 @@
         
                 // clearInterval(countDown);
                 
-                sec = 45 * 60;
+                sec = 40 * 60;
                 // sec = 30;
         
                 countDiv = document.getElementById("waktu"),
@@ -1132,7 +1160,7 @@
         
                 clearInterval(countDown);
 
-                sec = 70 * 60;
+                sec = 60 * 60;
                 // sec = 40;
         
                 countDiv = document.getElementById("waktu"),
@@ -1169,7 +1197,7 @@
         
                 clearInterval(countDown);
 
-                sec = 65 * 60;
+                sec = 60 * 60;
                 // sec = 40;
         
                 countDiv = document.getElementById("waktu"),

@@ -35,6 +35,8 @@ class Soal extends CI_Controller {
                 $this->load->view("pages/soal-ielts-002", $data);
             } else if($data['tes']['tipe_soal'] == "Soal_GT_002"){
                 $this->load->view("pages/soal-ielts-gt-002", $data);
+            } else if($data['tes']['tipe_soal'] == "Soal_GT_003"){
+                $this->load->view("pages/soal-ielts-gt-003", $data);
             }
         } else {
             $data['title'] = "Blank Link";
