@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="page page-center" id="transisi-sesi-1" style="display:nones">
+        <div class="page page-center" id="transisi-sesi-1" style="display:none">
             <div class="container-tight py-4">
                 <div class="card">
                     <div class="card-body">
@@ -63,7 +63,7 @@
             </div>
         </div>
 
-        <div class="page page-center" id="transisi-sesi-2" style="display:nones">
+        <div class="page page-center" id="transisi-sesi-2" style="display:none">
             <div class="container-tight py-4">
                 <div class="card">
                     <div class="card-body">
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <div class="page page-center" id="transisi-sesi-3" style="display:nones">
+        <div class="page page-center" id="transisi-sesi-3" style="display:none">
             <div class="container-tight py-4">
                 <div class="card">
                     <div class="card-body">
@@ -103,7 +103,7 @@
 
 
 
-        <div id="soal_tes" style="display:nones">
+        <div id="soal_tes" style="display:none">
             <div class="wrapper" id="elementtoScrollToID">
                 <div class="sticky-top">
                     <?php $this->load->view("_partials/navbar-header")?>
@@ -113,7 +113,7 @@
                         <div class="container-xl">
                             <input type="hidden" name="id_tes" value="<?= $id?>">
 
-                            <div class="sesi-listening" style="display:nones">
+                            <div class="sesi-listening" style="display:none">
                                 <div class="shadow card mb-3">
                                     <div class="card-body">
                                         <center>
@@ -412,7 +412,7 @@
                                 </div>
                             </div>
 
-                            <div class="sesi-reading" style="display:nones">
+                            <div class="sesi-reading" style="display:none">
                                 <div class="shadow card mb-3">
                                     <?php
                                         $text = "
@@ -513,7 +513,7 @@
                                                                     "no" => 8,
                                                                     "soal" => "Walking football became well-known when a club featured in a TV programme about the sport.",
                                                                     "pilihan" => ["TRUE", "FALSE", "NOT GIVEN"],
-                                                                    "name" => "jawaban_reading[9]"
+                                                                    "name" => "jawaban_reading[7]"
                                                                 ],
                                                                 [
                                                                     "no" => 9,
@@ -543,7 +543,7 @@
                                                                     "no" => 13,
                                                                     "soal" => "People can take part in the Active Lifestyles Team’s sessions whenever they wish",
                                                                     "pilihan" => ["TRUE", "FALSE", "NOT GIVEN"],
-                                                                    "name" => "jawaban_reading[38]"
+                                                                    "name" => "jawaban_reading[12]"
                                                                 ],
                                                                 [
                                                                     "no" => 14,
@@ -981,7 +981,7 @@
                                 </div>
                             </div>
 
-                            <div class="sesi-writing" style="display:nones">
+                            <div class="sesi-writing" style="display:none">
                                 <div class="card mb-3">
                                     <div class="card-body">
                                         <p class="question mb-3">
