@@ -946,27 +946,27 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 21,
-                "jawaban" => ["C become outdated."]
+                "jawaban" => ["<b>C.</b> become outdated."]
             ],
             [
                 "no" => 22,
-                "jawaban" => ["A is too slow"]
+                "jawaban" => ["<b>A.</b> is too slow"]
             ],
             [
                 "no" => 23,
-                "jawaban" => ["B the system does not handle course options."]
+                "jawaban" => ["<b>B.</b> the system does not handle course options."]
             ],
             [
                 "no" => 24,
-                "jawaban" => ["A students should create their own timetables"]
+                "jawaban" => ["<b>A.</b> students should create their own timetables"]
             ],
             [
                 "no" => 25,
-                "jawaban" => ["C be more economical"]
+                "jawaban" => ["<b>C.</b> be more economical"]
             ],
             [
                 "no" => 26,
-                "jawaban" => ["B four or five months."]
+                "jawaban" => ["<b>B.</b> four or five months."]
             ],
             [
                 "no" => 27,
@@ -986,7 +986,7 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 31,
-                "jawaban" => ["29,000 YEARS"]
+                "jawaban" => ["29,000 YEARS", "29.000 YEARS", "29000 YEARS"]
             ],
             [
                 "no" => 32,
@@ -1137,23 +1137,23 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 28,
-                "jawaban" => ["B. New breeds of cattle have led to an increase in TB."],
+                "jawaban" => ["<b>B.</b> New breeds of cattle have led to an increase in TB."],
             ],
             [
                 "no" => 29,
-                "jawaban" => ["A was introduced from outside Africa."],
+                "jawaban" => ["<b>A.</b> was introduced from outside Africa."],
             ],
             [
                 "no" => 30,
-                "jawaban" => ["C. linked to insect attacks on these vegetables."],
+                "jawaban" => ["<b>C.</b> linked to insect attacks on these vegetables."],
             ],
             [
                 "no" => 31,
-                "jawaban" => ["D. aphids would not have caused so much damage to the crops."],
+                "jawaban" => ["<b>D.</b> aphids would not have caused so much damage to the crops."],
             ],
             [
                 "no" => 32,
-                "jawaban" => ["A. the virus was unfamiliar to them."],
+                "jawaban" => ["<b>A.</b> the virus was unfamiliar to them."],
             ],
             [
                 "no" => 33,

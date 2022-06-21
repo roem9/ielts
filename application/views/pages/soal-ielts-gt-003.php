@@ -260,9 +260,9 @@
                                                     "no" => 21, 
                                                     "soal" => "Dave Hadley says that the computer system has",
                                                     "pilihan" => [
-                                                        "A too many users.",
-                                                        "B never worked well.",
-                                                        "C become outdated.",
+                                                        "<b>A.</b> too many users.",
+                                                        "<b>B.</b> never worked well.",
+                                                        "<b>C.</b> become outdated.",
                                                     ],
                                                     "name" => "jawaban_listening[20]"
                                                 ],
@@ -270,9 +270,9 @@
                                                     "no" => 22, 
                                                     "soal" => "The main problem with the computer system is that it",
                                                     "pilihan" => [
-                                                        "A is too slow",
-                                                        "B stops working",
-                                                        "C displays incorrect data",
+                                                        "<b>A.</b> is too slow",
+                                                        "<b>B.</b> stops working",
+                                                        "<b>C.</b> displays incorrect data",
                                                     ],
                                                     "name" => "jawaban_listening[21]"
                                                 ],
@@ -280,9 +280,9 @@
                                                     "no" => 23, 
                                                     "soal" => "Timetabling has become an issue because",
                                                     "pilihan" => [
-                                                        "A there is not enough time for anyone to do it.",
-                                                        "B the system does not handle course options.",
-                                                        "C the courses are constantly changing.",
+                                                        "<b>A.</b> there is not enough time for anyone to do it.",
+                                                        "<b>B.</b> the system does not handle course options.",
+                                                        "<b>C.</b> the courses are constantly changing.",
                                                     ],
                                                     "name" => "jawaban_listening[22]"
                                                 ],
@@ -290,9 +290,9 @@
                                                     "no" => 24, 
                                                     "soal" => "To solve the timetabling issues, Randhir suggests that",
                                                     "pilihan" => [
-                                                        "A students should create their own timetables",
-                                                        "B Dave should have someone to assist him.",
-                                                        "C. the number of courses should be reduced.",
+                                                        "<b>A.</b> students should create their own timetables",
+                                                        "<b>B.</b> Dave should have someone to assist him.",
+                                                        "<b>C.</b> the number of courses should be reduced.",
                                                     ],
                                                     "name" => "jawaban_listening[23]"
                                                 ],
@@ -300,9 +300,9 @@
                                                     "no" => 25, 
                                                     "soal" => "Randhir says that a new system may",
                                                     "pilihan" => [
-                                                        "A need to be trialed.",
-                                                        "B still to be trialed",
-                                                        "C be more economical",
+                                                        "<b>A.</b> need to be trialed.",
+                                                        "<b>B.</b> still to be trialed",
+                                                        "<b>C.</b> be more economical",
                                                     ],
                                                     "name" => "jawaban_listening[24]"
                                                 ],
@@ -310,9 +310,9 @@
                                                     "no" => 26, 
                                                     "soal" => "Improving the existing system will take",
                                                     "pilihan" => [
-                                                        "A a few weeks.",
-                                                        "B four or five months.",
-                                                        "C nine months ",
+                                                        "<b>A.</b> a few weeks.",
+                                                        "<b>B.</b> four or five months.",
+                                                        "<b>C.</b> nine months ",
                                                     ],
                                                     "name" => "jawaban_listening[25]"
                                                 ],
@@ -330,16 +330,16 @@
                                     <div class="card-body ps-4">
                                         <p class="question">
                                             Questions 27-30<br>
-                                            Complete the flow-chart below.<br>
+                                            Complete the flowchart below.<br>
                                             Write NO MORE THAN TWO WORDS for each answer.<br>
                                         </p>
                                         
                                         <center>
                                             <table class="table" style="width:500px">
-                                                    <tr>
-                                                        <td>
-                                                            <p><b>Next steps</b></p>
-                                                            <p>Get approval from 27<?= soal_isian_ielts("jawaban_listening[26]")?></p>
+                                                <tr>
+                                                    <td style="text-align:center">
+                                                        <p><b>Next steps</b></p>
+                                                        <p>Get approval from 27<?= soal_isian_ielts("jawaban_listening[26]")?></p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -350,7 +350,7 @@
                                         <center>
                                             <table class="table" style="width:500px">
                                                 <tr>
-                                                    <td>Complete a 28<?= soal_isian_ielts("jawaban_listening[27]")?> form</td>
+                                                    <td style="text-align:center">Complete a 28<?= soal_isian_ielts("jawaban_listening[27]")?> form</td>
                                                 </tr>
                                             </table>
                                         </center>
@@ -360,7 +360,7 @@
                                         <center>
                                             <table class="table" style="width:500px">
                                                 <tr>
-                                                    <td>Book a 29<?= soal_isian_ielts("jawaban_listening[28]")?> with the systems analyst</td>
+                                                    <td style="text-align:center">Book a 29<?= soal_isian_ielts("jawaban_listening[28]")?> with the systems analyst</td>
                                                 </tr>
                                             </table>
                                         </center>
@@ -370,7 +370,7 @@
                                         <center>
                                             <table class="table" style="width:500px">
                                                 <tr>
-                                                    <td>Set up a 30<?= soal_isian_ielts("jawaban_listening[29]")?>with technologies team</td>
+                                                    <td style="text-align:center">Set up a 30<?= soal_isian_ielts("jawaban_listening[29]")?>with technologies team</td>
                                                 </tr>
                                             </table>
                                         </center>
@@ -381,8 +381,8 @@
                                 <div class="shadow card mb-3">
                                     <div class="card-body ps-4">
                                         <p class="question">
-                                            SECTION 4 | Questions 31-40
-                                            Complete the sentences below.
+                                            SECTION 4 | Questions 31-40<br>
+                                            Complete the sentences below.<br>
                                             Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.
                                         </p>
 
@@ -481,21 +481,6 @@
                                             Do the following statements agree with the information given in the text on passage?<br>
                                             In boxes 8-14 on your answer sheet, write:<br>
                                         </p>
-                                        <table class="table">
-                                            <tr>
-                                                <td><b>TRUE</b></td>
-                                                <td>if the statement agrees with the information</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>FALSE</b></td>
-                                                <td>if the statement contradicts the information</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>NOT GIVEN</b></td>
-                                                <td>if there is no information on this</td>
-                                            </tr>
-                                        </table>
-
                                         <div class="row">
                                             <div class="col-7">
                                                 <div class="card">
@@ -785,10 +770,10 @@
                                                                     "no" => 28,
                                                                     "soal" => "What is the main problem faced by cattle farmers in Ethiopia, according to Professor Wood?",
                                                                     "pilihan" => [
-                                                                        "A. TB is being transmitted from people to cattle.",
-                                                                        "B. New breeds of cattle have led to an increase in TB.",
-                                                                        "C. The traditional breeds of cattle are being affected by TB.",
-                                                                        "D. TB has spread into places where it was previously unknown.",
+                                                                        "<b>A.</b> TB is being transmitted from people to cattle.",
+                                                                        "<b>B.</b> New breeds of cattle have led to an increase in TB.",
+                                                                        "<b>C.</b> The traditional breeds of cattle are being affected by TB.",
+                                                                        "<b>D.</b> TB has spread into places where it was previously unknown.",
                                                                     ],
                                                                     "name" => "jawaban_reading[27]"
                                                                 ],
@@ -796,10 +781,10 @@
                                                                     "no" => 29,
                                                                     "soal" => "When discussing the cultivation of cabbages in Ghana, the writer says that this crop",
                                                                     "pilihan" => [
-                                                                        "A was introduced from outside Africa.",
-                                                                        "B is not eaten much by local people.",
-                                                                        "C is not grown correctly by many farmers.",
-                                                                        "D requires the use of fertiliser and special equipment.",
+                                                                        "<b>A.</b> was introduced from outside Africa.",
+                                                                        "<b>B.</b> is not eaten much by local people.",
+                                                                        "<b>C.</b> is not grown correctly by many farmers.",
+                                                                        "<b>D.</b> requires the use of fertiliser and special equipment.",
                                                                     ],
                                                                     "name" => "jawaban_reading[28]"
                                                                 ],
@@ -807,10 +792,10 @@
                                                                     "no" => 30,
                                                                     "soal" => "Fening believed that the new disease destroying cabbages was",
                                                                     "pilihan" => [
-                                                                        "A. caused by overuse of pesticides.",
-                                                                        "B. also affecting other locally grown vegetables.",
-                                                                        "C. linked to insect attacks on these vegetables.",
-                                                                        "D. connected with the development of new insect breeds.",
+                                                                        "<b>A.</b> caused by overuse of pesticides.",
+                                                                        "<b>B.</b> also affecting other locally grown vegetables.",
+                                                                        "<b>C.</b> linked to insect attacks on these vegetables.",
+                                                                        "<b>D.</b> connected with the development of new insect breeds.",
                                                                     ],
                                                                     "name" => "jawaban_reading[29]"
                                                                 ],
@@ -818,10 +803,10 @@
                                                                     "no" => 31,
                                                                     "soal" => "Fening first suspected that the cabbage disease was caused by a virus because",
                                                                     "pilihan" => [
-                                                                        "A. evidence of viral disease could be seen on the cabbage leaves.",
-                                                                        "B. pink and green aphids did not commonly attack cabbages.",
-                                                                        "C. viral diseases affecting vegetables had occurred elsewhere in Africa.",
-                                                                        "D. aphids would not have caused so much damage to the crops.",
+                                                                        "<b>A.</b> evidence of viral disease could be seen on the cabbage leaves.",
+                                                                        "<b>B.</b> pink and green aphids did not commonly attack cabbages.",
+                                                                        "<b>C.</b> viral diseases affecting vegetables had occurred elsewhere in Africa.",
+                                                                        "<b>D.</b> aphids would not have caused so much damage to the crops.",
                                                                     ],
                                                                     "name" => "jawaban_reading[30]"
                                                                 ],
@@ -829,10 +814,10 @@
                                                                     "no" => 32,
                                                                     "soal" => "When doing further research in Cambridge, Fening and Carr discovered that",
                                                                     "pilihan" => [
-                                                                        "A. the virus was unfamiliar to them.",
-                                                                        "B. two different viruses were present.",
-                                                                        "C. the aphids’ DNA was more complex than expected.",
-                                                                        "D. one aphid was more harmful than the other.",
+                                                                        "<b>A.</b> the virus was unfamiliar to them.",
+                                                                        "<b>B.</b> two different viruses were present.",
+                                                                        "<b>C.</b> the aphids’ DNA was more complex than expected.",
+                                                                        "<b>D.</b> one aphid was more harmful than the other.",
                                                                     ],
                                                                     "name" => "jawaban_reading[31]"
                                                                 ],
@@ -1007,7 +992,7 @@
                                         <p>Dear……….,</p>
                                         <span>Type your answer here</span>
                                         <textarea id="textarea-1" class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                                        <center>Total word Count : <span id="count-textarea-1">0</span> words. Words left : <span id="count-left-1">150</span></center>
+                                        <center>Total word Count : <span id="count-textarea-1">0</span></center>
                                     </div>
                                 </div>
 
@@ -1032,7 +1017,7 @@
 
                                         <span>Type your answer here</span>
                                         <textarea id="textarea-2" class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
-                                        <center>Total word Count : <span id="count-textarea-2">0</span> words. Words left : <span id="count-left-2">250</span></center>
+                                        <center>Total word Count : <span id="count-textarea-2">0</span></span></center>
                                     </div>
                                 </div>
 
@@ -1063,28 +1048,28 @@
 
     $("#textarea-1").on('keyup', function(e) {
         var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
-        if (words <= 150) {
+        // if (words <= 150) {
             $('#count-textarea-1').text(words);
-            $('#count-left-1').text(150-words)
-        }else{
-            // Split the string on first 200 words and rejoin on spaces
-            var trimmed = $(this).val().split(/\s+/, 150).join(" ");
-            // Add a space at the end to keep new typing making new words
-            $(this).val(trimmed + " ");
-        }
+        //     $('#count-left-1').text(150-words)
+        // }else{
+        //     // Split the string on first 200 words and rejoin on spaces
+        //     var trimmed = $(this).val().split(/\s+/, 150).join(" ");
+        //     // Add a space at the end to keep new typing making new words
+        //     $(this).val(trimmed + " ");
+        // }
     });
 
     $("#textarea-2").on('keyup', function(e) {
         var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
-        if (words <= 250) {
+        // if (words <= 250) {
             $('#count-textarea-2').text(words);
-            $('#count-left-2').text(250-words)
-        }else{
-            // Split the string on first 200 words and rejoin on spaces
-            var trimmed = $(this).val().split(/\s+/, 250).join(" ");
-            // Add a space at the end to keep new typing making new words
-            $(this).val(trimmed + " ");
-        }
+        //     $('#count-left-2').text(250-words)
+        // }else{
+        //     // Split the string on first 200 words and rejoin on spaces
+        //     var trimmed = $(this).val().split(/\s+/, 250).join(" ");
+        //     // Add a space at the end to keep new typing making new words
+        //     $(this).val(trimmed + " ");
+        // }
     });
 
     $('.form-autosize').on('input', function () {

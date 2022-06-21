@@ -1027,7 +1027,8 @@
                                         </div>
 
                                         <span>Type your answer here</span>
-                                        <textarea class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <textarea id="textarea-1" class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <center>Total word Count : <span id="count-textarea-1">0</span></center>
                                     </div>
                                 </div>
 
@@ -1051,7 +1052,8 @@
                                         </table>
 
                                         <span>Type your answer here</span>
-                                        <textarea class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <textarea id="textarea-2" class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
+                                        <center>Total word Count : <span id="count-textarea-2">0</span></center>
                                     </div>
                                 </div>
 
@@ -1079,6 +1081,32 @@
 <?php $this->load->view("_partials/footer")?>
 
 <script>
+    $("#textarea-1").on('keyup', function(e) {
+        var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
+        // if (words <= 150) {
+            $('#count-textarea-1').text(words);
+        //     $('#count-left-1').text(150-words)
+        // }else{
+        //     // Split the string on first 200 words and rejoin on spaces
+        //     var trimmed = $(this).val().split(/\s+/, 150).join(" ");
+        //     // Add a space at the end to keep new typing making new words
+        //     $(this).val(trimmed + " ");
+        // }
+    });
+
+    $("#textarea-2").on('keyup', function(e) {
+        var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
+        // if (words <= 250) {
+            $('#count-textarea-2').text(words);
+        //     $('#count-left-2').text(250-words)
+        // }else{
+        //     // Split the string on first 200 words and rejoin on spaces
+        //     var trimmed = $(this).val().split(/\s+/, 250).join(" ");
+        //     // Add a space at the end to keep new typing making new words
+        //     $(this).val(trimmed + " ");
+        // }
+    });
+
     $('.form-autosize').on('input', function () {
         this.style.width = '60px';
             
