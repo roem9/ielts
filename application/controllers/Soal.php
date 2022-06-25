@@ -37,6 +37,8 @@ class Soal extends CI_Controller {
                 $this->load->view("pages/soal-ielts-gt-002", $data);
             } else if($data['tes']['tipe_soal'] == "Soal_GT_003"){
                 $this->load->view("pages/soal-ielts-gt-003", $data);
+            } else if($data['tes']['tipe_soal'] == "Soal_003"){
+                $this->load->view("pages/soal-ielts-003", $data);
             }
         } else {
             $data['title'] = "Blank Link";
@@ -397,6 +399,8 @@ class Soal extends CI_Controller {
             $msg = $this->Soal_model->add_jawaban_soal_gt_002();
         } else if($tes['tipe_soal'] == "Soal_GT_003"){
             $msg = $this->Soal_model->add_jawaban_soal_gt_003();
+        } else if($tes['tipe_soal'] == "Soal_003"){
+            $msg = $this->Soal_model->add_jawaban_soal_003();
         }
 
         // $msg = 'Thank you for submitting your answer. Your answer will be assessed by our teacher and the report will be processed after three days';

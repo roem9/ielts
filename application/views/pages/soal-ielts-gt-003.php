@@ -492,7 +492,7 @@
                                             <div class="col-5">
                                                 <div class="card">
                                                     <div class="card-body ps-4" style="height: 600px; overflow: scroll">
-                                                    <?php
+                                                        <?php
                                                             $data_soal_8_14 = [
                                                                 [
                                                                     "no" => 8,
