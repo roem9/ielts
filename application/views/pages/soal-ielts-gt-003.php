@@ -568,20 +568,6 @@
                                             READING PASSAGE 3 | (Question 15-21)<br>
                                             You should spend about 20 minutes on Questions 15-21 which are based on Reading Passage 3 below. <br>
                                         </p>
-                                        <table class="table">
-                                            <tr>
-                                                <td><b>TRUE</b></td>
-                                                <td>if the statement agrees with the information</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>FALSE</b></td>
-                                                <td>if the statement contradicts the information</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>NOT GIVEN</b></td>
-                                                <td>if there is no information on this</td>
-                                            </tr>
-                                        </table>
 
                                         <div class="row">
                                             <div class="col-7">

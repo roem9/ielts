@@ -90,23 +90,23 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 21,
-                "jawaban" => ["C. she had been inspired by a particular book"],
+                "jawaban" => ["<b>C.</b> she had been inspired by a particular book"],
             ],
             [
                 "no" => 22,
-                "jawaban" => ["A. the effect of teacher discipline"],
+                "jawaban" => ["<b>A.</b> the effect of teacher discipline"],
             ],
             [
                 "no" => 23,
-                "jawaban" => ["B. girls were more negative about school than boys"],
+                "jawaban" => ["<b>B.</b> girls were more negative about school than boys"],
             ],
             [
                 "no" => 24,
-                "jawaban" => ["A. teachers should be flexible in unpredictable ways"],
+                "jawaban" => ["<b>A.</b> teachers should be flexible in unpredictable ways"],
             ],
             [
                 "no" => 25,
-                "jawaban" => ["B. reflect on her own research experience in an interesting way"],
+                "jawaban" => ["<b>B.</b> reflect on her own research experience in an interesting way"],
             ],
             [
                 "no" => 26,
@@ -130,11 +130,11 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 31,
-                "jawaban" => ["C. not be known for many, many years"],
+                "jawaban" => ["<b>C.</b> not be known for many, many years"],
             ],
             [
                 "no" => 32,
-                "jawaban" => ["A. an existing problem even worse"],
+                "jawaban" => ["<b>A.</b> an existing problem even worse"],
             ],
             [
                 "no" => 33,
@@ -490,27 +490,27 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 11,
-                "jawaban" => ["B. 20 years."]
+                "jawaban" => ["<b>B.</b> 20 years."]
             ],
             [
                 "no" => 12,
-                "jawaban" => ["A. France."]
+                "jawaban" => ["<b>A.</b> France."]
             ],
             [
                 "no" => 13,
-                "jawaban" => ["B. drama"]
+                "jawaban" => ["<b>B.</b> drama"]
             ],
             [
                 "no" => 14,
-                "jawaban" => ["C. 10.30 p.m."]
+                "jawaban" => ["<b>C.</b> 10.30 p.m."]
             ],
             [
                 "no" => 15,
-                "jawaban" => ["C. must be taken out at the time of booking."]
+                "jawaban" => ["<b>C.</b> must be taken out at the time of booking."]
             ],
             [
                 "no" => 16,
-                "jawaban" => ["A. a free gift."]
+                "jawaban" => ["<b>A.</b> a free gift."]
             ],
             [
                 "no" => 17,
@@ -542,19 +542,19 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 24,
-                "jawaban" => ["A. potential leaders."]
+                "jawaban" => ["<b>A.</b> potential leaders."]
             ],
             [
                 "no" => 25,
-                "jawaban" => ["B. balance conflicting needs."]
+                "jawaban" => ["<b>B.</b> balance conflicting needs."]
             ],
             [
                 "no" => 26,
-                "jawaban" => ["A. can think independently."]
+                "jawaban" => ["<b>A.</b> can think independently."]
             ],
             [
                 "no" => 27,
-                "jawaban" => ["B. encourage co-operation early on."]
+                "jawaban" => ["<b>B.</b> encourage co-operation early on."]
             ],
             [
                 "no" => 28,
@@ -673,19 +673,19 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 16,
-                "jawaban" => ["C. a place to live only."],
+                "jawaban" => ["<b>C.</b> a place to live only."],
             ],
             [
                 "no" => 17,
-                "jawaban" => ["B. not allowed in University housing"],
+                "jawaban" => ["<b>B.</b> not allowed in University housing"],
             ],
             [
                 "no" => 18,
-                "jawaban" => ["A. full-time students only"],
+                "jawaban" => ["<b>A.</b> full-time students only"],
             ],
             [
                 "no" => 19,
-                "jawaban" => ["B. plentiful"],
+                "jawaban" => ["<b>B.</b> plentiful"],
             ],
             [
                 "no" => 20,
