@@ -1738,6 +1738,468 @@ class Soal_model extends CI_Model {
 
         return $msg;
     }
+
+    public function add_jawaban_soal_academic_post_test(){
+        
+        $jawaban_listening = [
+            [
+                "no" => 1,
+                "jawaban" => ["SYLVIA"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["ENGLAND"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["JULY 26", "26 JULY"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["TWO"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["HOLIDAY"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["APARTMENT"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["SECURE"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["MOTORWAY"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["PALM"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["1500"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["<b>B.</b> in the lobby."],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["<b>A.</b> on the radio."],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["<b>A.</b> 12"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["<b>C.</b> males and females of any age."],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["TRAMPING"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["WALKING"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["ORGANIZER"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["VARIABLE"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["MYSTERY"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["CHAIRMAN"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["ED995", "ED 995"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["DOCUMENT"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["SOCIO-ECONOMIC"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["IMPACT"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["30%"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["ESSAY"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["TOWER"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["2008"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["BROWN"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["KNOWLEDGE POLICY"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["ATTACKS"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["ILLNESS"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["ACTIVE"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["DEFENCE"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["BLOOD"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["INFECTED"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["EXPERIMENT"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["TOXINS"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["DAMAGE"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["NAKED"],
+            ],
+        ];
+
+        $jawaban_reading = [
+            [
+                "no" => 1,
+                "jawaban" => ["VIII"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["I"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["IX"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["III"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["VI"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["MOLTEN GLASS", "RIBBON OF GLASS", "MOLTEEN GLASS", "RIBBON GLASS"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["BELT OF STEEL", "STEEL BELT", "MOVING BELT"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["LIGHT BULB MOULDS"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["S"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["M"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["S"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["IT HAS DOUBLED", "DOUBLED", "DOUBLING"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["DE-LAYERING"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["DEMOGRAPHIC TRENDS"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["EMPLOYERS"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["YES"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["NO"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["NO"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["VI"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["III"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["I"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["II"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["WILL NOT SURVIVE", "MAY NOT SURVIVE", "WILL BECOME EXTINCT", "MAY BECOME EXTINCT", "COULD BECOME EXTINCT"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["LOCALITY DISTRIBUTION"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["LOGGING TAKES PLACE", "LOGGING OCCURS"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["<b>B.</b> Influential factors in assessing survival probability"],
+            ],
+            // [
+            //     "no" => 40,
+            //     "jawaban" => ["x"],
+            // ],
+        ];
+
+        $jawaban_ietls = "";
+
+        $benar_listening = 0;
+        foreach ($_POST['jawaban_listening'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+            }
+
+            // if($i == 11){
+            //     if(strtolower($_POST['jawaban_listening'][10]) == 'B' && strtolower($_POST['jawaban_listening'][11]) == 'E'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&E&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'E' && strtolower($_POST['jawaban_listening'][11]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&E&&&Benar|||Listening&&&B&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'E'){
+            //         $jawaban_ietls .= 'Listening&&&E&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][11]) == 'E'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&E&&&Benar|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][11]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&B&&&Benar|||';
+            //         $benar_listening++;
+            //     } else {
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+            //     }
+            // } else if($i == 13){
+            //     if(strtolower($_POST['jawaban_listening'][12]) == 'B' && strtolower($_POST['jawaban_listening'][13]) == 'C'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&C&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'C' && strtolower($_POST['jawaban_listening'][13]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&C&&&Benar|||Listening&&&B&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'C'){
+            //         $jawaban_ietls .= 'Listening&&&C&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][13]) == 'C'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&C&&&Benar|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][13]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&B&&&Benar|||';
+            //         $benar_listening++;
+            //     } else {
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+            //     }
+            // } else if($i != 10 && $i != 12){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                    $status = "Benar";
+                    $benar_listening++;
+                } else {
+                    $status = "Salah";
+                }
+    
+                $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            // }
+        }
+
+        $benar_reading = 0;
+        foreach ($_POST['jawaban_reading'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+            }
+
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_reading++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+
+        $id_tes = $this->input->post("id_tes");
+
+        $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        $writing_text = $this->input->post("text_writing");
+        $text_writing = "";
+
+        foreach ($writing_text as $writing_text) {
+            $text_writing .= $writing_text . "|||";
+        }
+
+        $text_writing = substr($text_writing, 0, -3);
+        
+        $data = [
+            "id_tes" => $tes['id_tes'],
+            "first_name" => $this->input->post("first_name"),
+            "last_name" => $this->input->post("last_name"),
+            "email" => $this->input->post("email"),
+            "nilai_listening" => $benar_listening,
+            "nilai_reading" => $benar_reading,
+            "text_listening_reading" => $jawaban_ietls,
+            "text_writing" => $text_writing
+        ];
+
+        $id = $this->Main_model->add_data("peserta_ielts", $data);
+
+        $replace_wa = array(
+            ' ' => '%20',
+            '"' => '%22'
+        );
+        $tgl_tes = date("d-M-Y", strtotime($tes['tgl_tes']));
+
+        $replacements = array(
+            '$first_name' => $this->input->post("first_name"),
+            '$last_name' => $this->input->post("last_name"),
+            '$email' => $this->input->post("email"),
+            '$benar_listening' => $benar_listening,
+            '$benar_reading' => $benar_reading,
+            '$tes' => $tes['nama_tes'],
+            '$tgl_tes' => tgl_indo($tes["tgl_tes"], "lengkap"),
+            '$tgl_pengumuman' => tgl_indo($tes["tgl_pengumuman"], "lengkap"),
+        );
+
+        $msg = str_replace(array_keys($replacements), $replacements, $tes['msg']);
+
+        return $msg;
+    }
 }
 
 /* End of file Other_model.php */
