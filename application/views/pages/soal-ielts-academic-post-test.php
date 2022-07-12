@@ -1110,17 +1110,9 @@
                             <div class="sesi-writing" style="display:none">
                                 <div class="card mb-3">
                                     <div class="card-body">
-                                        <p class="question mb-3">
-                                            IELTS WRITING TASK ONE<br>
-                                            You should spend about 20 minutes on this task 
-                                        </p>
+                                        <img src="<?= base_url()?>assets/img/writing-academic-post-test-001.png" alt="">
 
-                                        <p><i>The graph below shows unemployment rates in the US and Japan from March 1993 to 1999. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></p>
-                                        <p>Write at least 150 words.</p>
-
-                                        <img src="<?= base_url()?>assets/img/writing-academic-post-test-001.jpg" alt="">
-
-                                        <span>Type your answer here</span>
+                                        <p><span>Type your answer here</span></p>
                                         <textarea id="textarea-1" class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>
                                         <center>Total word Count : <span id="count-textarea-1">0</span></center>
                                     </div>
@@ -1132,16 +1124,23 @@
                                             IELTS WRITING TASK TWO<br>
                                             You should spend about 40 minutes on this task<br>
                                         </p>
-
+                                        
+                                        <p>Write about the following topic:</p>
                                         <table class="table">
                                             <tr>
                                                 <td>
-                                                    Some people believe that living in big cities is becoming more difficult. Others believe that it is getting easier. Discuss both views and give your own opinion.
+                                                    <i>
+                                                        Being a celebrity-such as a famous film star or sports personality-brings problems as well as benefits. <br>
+                                                        Do you think that being a celebrity brings more benefits or more problems?
+                                                    </i>
                                                 </td>
                                             </tr>
                                         </table>
 
-                                        <p>Write at least 250 words.</p>
+                                        <p>
+                                            Give reasons for your answer and include any relevant examples from your own knowledge or experience<br>
+                                            Write at least 250 words.
+                                        </p>
 
                                         <span>Type your answer here</span>
                                         <textarea id="textarea-2" class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="overflow: hidden scroll; overflow-wrap: break-word; resize: none; height: 56px;"></textarea>

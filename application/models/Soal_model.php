@@ -2200,6 +2200,1300 @@ class Soal_model extends CI_Model {
 
         return $msg;
     }
+
+    public function add_jawaban_soal_academic_pretest(){
+        
+        $jawaban_listening = [
+            [
+                "no" => 1,
+                "jawaban" => ["DURHAM"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["78483762"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["TRADER"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["17 BROWN"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["4065"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["6 MONTHS"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["WASHING MACHINE"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["750"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["WATER"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["NOISY"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["AIR CONDITIONED", "AIR-CONDITIONED"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["HOPE"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["RAIN FOREST"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["PHOTO OPPORTUNITY"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["RECEPTION DESK"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["GREEN MOUNTAIN"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["SENIOR CITIZEN"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["8.30AM"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["COACH TRAVEL"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["ENTRANCE FEES"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["<b>B.</b> provide quality education"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["<b>A.</b> written responses"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["<b>A.</b> organizational skills"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["<b>C.</b> hard work and diligence"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["<b>B.</b> many different teaching styles"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["REACTIONS"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["ENVIRONMENTAL"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["PERSONAL"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["SURROUNDINGS"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["PLACES", "AREAS"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["PRESENCE"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["UNEASY"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["PARTS"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["AVERSION"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["DARK"],
+            ],
+        ];
+
+        $jawaban_reading = [
+            [
+                "no" => 1,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["YES"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["NO"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["YES"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["NO"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["FARMING"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["CURRY"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["NATURAL"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["CHEMICAL"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["J"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["K"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["<b>B.</b> Appealing to individual customers."],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["<b>B.</b> Influential factors in assessing survival probability"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["<b>D.</b> He wanted to keep things unchanged.",],
+            ],
+        ];
+
+        $jawaban_ietls = "";
+
+        $benar_listening = 0;
+        foreach ($_POST['jawaban_listening'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+            }
+
+            // if($i == 11){
+            //     if(strtolower($_POST['jawaban_listening'][10]) == 'B' && strtolower($_POST['jawaban_listening'][11]) == 'E'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&E&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'E' && strtolower($_POST['jawaban_listening'][11]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&E&&&Benar|||Listening&&&B&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'E'){
+            //         $jawaban_ietls .= 'Listening&&&E&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][11]) == 'E'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&E&&&Benar|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][11]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&B&&&Benar|||';
+            //         $benar_listening++;
+            //     } else {
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+            //     }
+            // } else if($i == 13){
+            //     if(strtolower($_POST['jawaban_listening'][12]) == 'B' && strtolower($_POST['jawaban_listening'][13]) == 'C'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&C&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'C' && strtolower($_POST['jawaban_listening'][13]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&C&&&Benar|||Listening&&&B&&&Benar|||';
+            //         $benar_listening = $benar_listening + 2;
+            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'C'){
+            //         $jawaban_ietls .= 'Listening&&&C&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][13]) == 'C'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&C&&&Benar|||';
+            //         $benar_listening++;
+            //     } else if(strtolower($_POST['jawaban_listening'][13]) == 'B'){
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&B&&&Benar|||';
+            //         $benar_listening++;
+            //     } else {
+            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+            //     }
+            // } else if($i != 10 && $i != 12){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                    $status = "Benar";
+                    $benar_listening++;
+                } else {
+                    $status = "Salah";
+                }
+    
+                $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            // }
+        }
+
+        $benar_reading = 0;
+        foreach ($_POST['jawaban_reading'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+            }
+
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_reading++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+
+        $id_tes = $this->input->post("id_tes");
+
+        $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        $writing_text = $this->input->post("text_writing");
+        $text_writing = "";
+
+        foreach ($writing_text as $writing_text) {
+            $text_writing .= $writing_text . "|||";
+        }
+
+        $text_writing = substr($text_writing, 0, -3);
+        
+        $data = [
+            "id_tes" => $tes['id_tes'],
+            "first_name" => $this->input->post("first_name"),
+            "last_name" => $this->input->post("last_name"),
+            "email" => $this->input->post("email"),
+            "nilai_listening" => $benar_listening,
+            "nilai_reading" => $benar_reading,
+            "text_listening_reading" => $jawaban_ietls,
+            "text_writing" => $text_writing
+        ];
+
+        $id = $this->Main_model->add_data("peserta_ielts", $data);
+
+        $replace_wa = array(
+            ' ' => '%20',
+            '"' => '%22'
+        );
+        $tgl_tes = date("d-M-Y", strtotime($tes['tgl_tes']));
+
+        $replacements = array(
+            '$first_name' => $this->input->post("first_name"),
+            '$last_name' => $this->input->post("last_name"),
+            '$email' => $this->input->post("email"),
+            '$benar_listening' => $benar_listening,
+            '$benar_reading' => $benar_reading,
+            '$tes' => $tes['nama_tes'],
+            '$tgl_tes' => tgl_indo($tes["tgl_tes"], "lengkap"),
+            '$tgl_pengumuman' => tgl_indo($tes["tgl_pengumuman"], "lengkap"),
+        );
+
+        $msg = str_replace(array_keys($replacements), $replacements, $tes['msg']);
+
+        return $msg;
+    }
+
+    public function add_jawaban_soal_general_pretest(){
+        
+        $jawaban_listening = [
+            [
+                "no" => 1,
+                "jawaban" => ["DURHAM"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["78483762"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["TRADER"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["17 BROWN"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["4065"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["6 MONTHS"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["WASHING MACHINE"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["750"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["WATER"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["NOISY"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["AIR CONDITIONED", "AIR-CONDITIONED"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["HOPE"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["RAIN FOREST"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["PHOTO OPPORTUNITY"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["RECEPTION DESK"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["GREEN MOUNTAIN"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["SENIOR CITIZEN"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["8.30AM"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["COACH TRAVEL"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["ENTRANCE FEES"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["<b>B.</b> provide quality education"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["<b>A.</b> written responses"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["<b>A.</b> organizational skills"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["<b>C.</b> hard work and diligence"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["<b>B.</b> many different teaching styles"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["REACTIONS"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["ENVIRONMENTAL"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["PERSONAL"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["SURROUNDINGS"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["PLACES", "AREAS"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["PRESENCE"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["UNEASY"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["PARTS"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["AVERSION"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["DARK"],
+            ],
+        ];
+
+        $jawaban_reading = [
+            [
+                "no" => 1,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["HOSPITALITY DEPARTMENT"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["ACADEMIC CALENDAR"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["1 OCTOBER", "1ST OCTOBER"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["NOMINATED CONTRACTOR"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["PERMITS"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["CONCORDE BUILDING"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["26 WEEKS"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["SIX WEEKS"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["£112.75", "112.75"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["39 WEEKS"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["ANTENATAL CLINICS"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["PERSONAL CIRCUMSTANCES"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["GRANTS"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["II"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["VIII"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["VII"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["III"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["VI"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["<b>A.</b> They did not last for a long time."],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["<b>B.</b> to join the layers of pith strips together"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["<b>D.</b> those in power may Wish to keep others in ignorance."],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["<b>C.</b> papyrus could be used to build boats for long sea journeys."],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["<b>B.</b> Its significance is restricted to its role in the past."],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["INSECTS"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["TOMB"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["ERUPTION",],
+            ],
+        ];
+
+        $jawaban_ietls = "";
+
+        $benar_listening = 0;
+        foreach ($_POST['jawaban_listening'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+            }
+
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_listening++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $benar_reading = 0;
+        foreach ($_POST['jawaban_reading'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+            }
+
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_reading++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+
+        $id_tes = $this->input->post("id_tes");
+
+        $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        $writing_text = $this->input->post("text_writing");
+        $text_writing = "";
+
+        foreach ($writing_text as $writing_text) {
+            $text_writing .= $writing_text . "|||";
+        }
+
+        $text_writing = substr($text_writing, 0, -3);
+        
+        $data = [
+            "id_tes" => $tes['id_tes'],
+            "first_name" => $this->input->post("first_name"),
+            "last_name" => $this->input->post("last_name"),
+            "email" => $this->input->post("email"),
+            "nilai_listening" => $benar_listening,
+            "nilai_reading" => $benar_reading,
+            "text_listening_reading" => $jawaban_ietls,
+            "text_writing" => $text_writing
+        ];
+
+        $id = $this->Main_model->add_data("peserta_ielts", $data);
+
+        $replace_wa = array(
+            ' ' => '%20',
+            '"' => '%22'
+        );
+        $tgl_tes = date("d-M-Y", strtotime($tes['tgl_tes']));
+
+        $replacements = array(
+            '$first_name' => $this->input->post("first_name"),
+            '$last_name' => $this->input->post("last_name"),
+            '$email' => $this->input->post("email"),
+            '$benar_listening' => $benar_listening,
+            '$benar_reading' => $benar_reading,
+            '$tes' => $tes['nama_tes'],
+            '$tgl_tes' => tgl_indo($tes["tgl_tes"], "lengkap"),
+            '$tgl_pengumuman' => tgl_indo($tes["tgl_pengumuman"], "lengkap"),
+        );
+
+        $msg = str_replace(array_keys($replacements), $replacements, $tes['msg']);
+
+        return $msg;
+    }
+
+    public function add_jawaban_soal_general_post_test(){
+        
+        $jawaban_listening = [
+            [
+                "no" => 1,
+                "jawaban" => ["SYLVIA"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["ENGLAND"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["JULY 26", "26 JULY"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["TWO"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["HOLIDAY"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["APARTMENT"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["SECURE"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["MOTORWAY"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["PALM"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["1500"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["<b>B.</b> in the lobby."],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["<b>A.</b> on the radio."],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["<b>A.</b> 12"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["<b>C.</b> males and females of any age."],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["TRAMPING"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["WALKING"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["ORGANIZER"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["VARIABLE"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["MYSTERY"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["CHAIRMAN"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["ED995", "ED 995"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["DOCUMENT"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["SOCIO-ECONOMIC"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["IMPACT"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["30%"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["ESSAY"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["TOWER"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["2008"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["BROWN"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["KNOWLEDGE POLICY"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["ATTACKS"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["ILLNESS"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["ACTIVE"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["DEFENCE"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["BLOOD"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["INFECTED"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["EXPERIMENT"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["TOXINS"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["DAMAGE"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["NAKED"],
+            ],
+        ];
+
+        $jawaban_reading = [
+            [
+                "no" => 1,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["H"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["D"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["FESTIVALS"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["BUDGET"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["PARTNERSHIP"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["DIVERSITY"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["DATABASE"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["ACCOUNTING"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["KNOWLEDGE"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["REGULATIONS"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["RESPONSIBILITIES"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["LEAFLETS"],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["STATEMENT"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["CONTRACTORS"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["STRESS"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["<b>B.</b> The topics they wrote about were very varied."],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["<b>A.</b> explaining why jobs were plentiful in ancient Egypt"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["<b>C.</b> rejecting a popular view"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["<b>B.</b> how ancient Egyptians viewed their role in society."],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["<b>D.</b> appreciative"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["COMMUNITY SERVICE"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["SHIFTING SAND"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["COPPER"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["FARMERS"],
+            ],
+        ];
+
+        $jawaban_ietls = "";
+
+        $benar_listening = 0;
+        foreach ($_POST['jawaban_listening'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+            }
+            
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_listening++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $benar_reading = 0;
+        foreach ($_POST['jawaban_reading'] as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+            }
+
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
+                $status = "Benar";
+                $benar_reading++;
+            } else {
+                $status = "Salah";
+            }
+
+            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+        }
+
+        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+
+        $id_tes = $this->input->post("id_tes");
+
+        $tes = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
+
+        $writing_text = $this->input->post("text_writing");
+        $text_writing = "";
+
+        foreach ($writing_text as $writing_text) {
+            $text_writing .= $writing_text . "|||";
+        }
+
+        $text_writing = substr($text_writing, 0, -3);
+        
+        $data = [
+            "id_tes" => $tes['id_tes'],
+            "first_name" => $this->input->post("first_name"),
+            "last_name" => $this->input->post("last_name"),
+            "email" => $this->input->post("email"),
+            "nilai_listening" => $benar_listening,
+            "nilai_reading" => $benar_reading,
+            "text_listening_reading" => $jawaban_ietls,
+            "text_writing" => $text_writing
+        ];
+
+        $id = $this->Main_model->add_data("peserta_ielts", $data);
+
+        $replace_wa = array(
+            ' ' => '%20',
+            '"' => '%22'
+        );
+        $tgl_tes = date("d-M-Y", strtotime($tes['tgl_tes']));
+
+        $replacements = array(
+            '$first_name' => $this->input->post("first_name"),
+            '$last_name' => $this->input->post("last_name"),
+            '$email' => $this->input->post("email"),
+            '$benar_listening' => $benar_listening,
+            '$benar_reading' => $benar_reading,
+            '$tes' => $tes['nama_tes'],
+            '$tgl_tes' => tgl_indo($tes["tgl_tes"], "lengkap"),
+            '$tgl_pengumuman' => tgl_indo($tes["tgl_pengumuman"], "lengkap"),
+        );
+
+        $msg = str_replace(array_keys($replacements), $replacements, $tes['msg']);
+
+        return $msg;
+    }
 }
 
 /* End of file Other_model.php */

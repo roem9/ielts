@@ -41,6 +41,12 @@ class Soal extends CI_Controller {
                 $this->load->view("pages/soal-ielts-003", $data);
             } else if($data['tes']['tipe_soal'] == "Soal_Academic_Post_Test"){
                 $this->load->view("pages/soal-ielts-academic-post-test", $data);
+            } else if($data['tes']['tipe_soal'] == "Soal_Academic_Pretest"){
+                $this->load->view("pages/soal-ielts-academic-pretest", $data);
+            } else if($data['tes']['tipe_soal'] == "Soal_General_Post_Test"){
+                $this->load->view("pages/soal-ielts-general-post-test", $data);
+            } else if($data['tes']['tipe_soal'] == "Soal_General_Pretest"){
+                $this->load->view("pages/soal-ielts-general-pretest", $data);
             }
         } else {
             $data['title'] = "Blank Link";
@@ -405,6 +411,12 @@ class Soal extends CI_Controller {
             $msg = $this->Soal_model->add_jawaban_soal_003();
         } else if($tes['tipe_soal'] == "Soal_Academic_Post_Test"){
             $msg = $this->Soal_model->add_jawaban_soal_academic_post_test();
+        } else if($tes['tipe_soal'] == "Soal_Academic_Pretest"){
+            $msg = $this->Soal_model->add_jawaban_soal_academic_pretest();
+        } else if($tes['tipe_soal'] == "Soal_General_Post_Test"){
+            $msg = $this->Soal_model->add_jawaban_soal_general_post_test();
+        } else if($tes['tipe_soal'] == "Soal_General_Pretest"){
+            $msg = $this->Soal_model->add_jawaban_soal_general_pretest();
         }
 
         // $msg = 'Thank you for submitting your answer. Your answer will be assessed by our teacher and the report will be processed after three days';
