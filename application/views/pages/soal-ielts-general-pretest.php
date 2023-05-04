@@ -432,7 +432,7 @@
                                             <li class='reading-6'>personal care</li>
                                         </ul>
                                         <p class='reading-7'>
-                                            ((b))Who provides transition care services?((/b))(br)
+                                            ((b))Who provides transition care services?((/b))((br))
                                             Transition care is often provided by non-government organisations and is subsidised by the government. If your circumstances allow, it is expected you’ll contribute to the cost of your care.
                                         </p>
                                         <p class='reading-8'>

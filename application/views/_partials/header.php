@@ -31,4 +31,4 @@
     </script>
   </head>
   <!-- <body class="antialiased" style="background-color: #265D5A"> -->
-  <body class="antialiased" style="background-color: <?= $background['value']?>">
+  <body class="antialiased" style="background-color: <?= $background['value']?>" onmouseleave="showAlertWithCountdown(10)" onmouseenter="returnWorkSheet()">

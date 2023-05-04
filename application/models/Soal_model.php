@@ -362,23 +362,23 @@ class Soal_model extends CI_Model {
             }
 
             if($i == 8){
-                if(strtolower($_POST['jawaban_reading'][7]) == 'sea mamals' && strtolower($_POST['jawaban_reading'][8]) == 'fish'){
-                    $jawaban_ietls .= 'Reading&&&sea mamals&&&Benar|||Reading&&&fish&&&Benar|||';
+                if(strtolower($_POST['jawaban_reading'][7]) == 'sea mammals' && strtolower($_POST['jawaban_reading'][8]) == 'fish'){
+                    $jawaban_ietls .= 'Reading&&&sea mammals&&&Benar|||Reading&&&fish&&&Benar|||';
                     $benar_reading = $benar_reading + 2;
-                } else if(strtolower($_POST['jawaban_reading'][7]) == 'fish' && strtolower($_POST['jawaban_reading'][8]) == 'sea mamals'){
-                    $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&sea mamals&&&Benar|||';
+                } else if(strtolower($_POST['jawaban_reading'][7]) == 'fish' && strtolower($_POST['jawaban_reading'][8]) == 'sea mammals'){
+                    $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&sea mammals&&&Benar|||';
                     $benar_reading = $benar_reading + 2;
                 } else if(strtolower($_POST['jawaban_reading'][7]) == 'fish'){
                     $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
                     $benar_reading++;
-                } else if(strtolower($_POST['jawaban_reading'][7]) == 'sea mamals'){
-                    $jawaban_ietls .= 'Reading&&&sea mamals&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
+                } else if(strtolower($_POST['jawaban_reading'][7]) == 'sea mammals'){
+                    $jawaban_ietls .= 'Reading&&&sea mammals&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
                     $benar_reading++;
                 } else if(strtolower($_POST['jawaban_reading'][8]) == 'fish'){
                     $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&fish&&&Benar|||';
                     $benar_reading++;
-                } else if(strtolower($_POST['jawaban_reading'][8]) == 'sea mamals'){
-                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&sea mamals&&&Benar|||';
+                } else if(strtolower($_POST['jawaban_reading'][8]) == 'sea mammals'){
+                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&sea mammals&&&Benar|||';
                     $benar_reading++;
                 } else {
                     $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][7])).'&&&Salah|||Reading&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_reading'][8])).'&&&Salah|||';
@@ -1565,15 +1565,18 @@ class Soal_model extends CI_Model {
             ],
             [
                 "no" => 31,
-                "jawaban" => ["EMOTIONS"],
+                // "jawaban" => ["EMOTIONS"],
+                "jawaban" => ["C"],
             ],
             [
                 "no" => 32,
-                "jawaban" => ["COMPLEXITY"],
+                // "jawaban" => ["COMPLEXITY"],
+                "jawaban" => ["B"],
             ],
             [
                 "no" => 33,
-                "jawaban" => ["IMAGES"],
+                // "jawaban" => ["IMAGES"],
+                "jawaban" => ["H"],
             ],
             [
                 "no" => 34,
@@ -1615,51 +1618,51 @@ class Soal_model extends CI_Model {
                 $data_jawaban[$j] = strtolower($data_jawaban_listening);
             }
 
-            // if($i == 11){
-            //     if(strtolower($_POST['jawaban_listening'][10]) == 'B' && strtolower($_POST['jawaban_listening'][11]) == 'E'){
-            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&E&&&Benar|||';
-            //         $benar_listening = $benar_listening + 2;
-            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'E' && strtolower($_POST['jawaban_listening'][11]) == 'B'){
-            //         $jawaban_ietls .= 'Listening&&&E&&&Benar|||Listening&&&B&&&Benar|||';
-            //         $benar_listening = $benar_listening + 2;
-            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'E'){
-            //         $jawaban_ietls .= 'Listening&&&E&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
-            //         $benar_listening++;
-            //     } else if(strtolower($_POST['jawaban_listening'][10]) == 'B'){
-            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
-            //         $benar_listening++;
-            //     } else if(strtolower($_POST['jawaban_listening'][11]) == 'E'){
-            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&E&&&Benar|||';
-            //         $benar_listening++;
-            //     } else if(strtolower($_POST['jawaban_listening'][11]) == 'B'){
-            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&B&&&Benar|||';
-            //         $benar_listening++;
-            //     } else {
-            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
-            //     }
-            // } else if($i == 13){
-            //     if(strtolower($_POST['jawaban_listening'][12]) == 'B' && strtolower($_POST['jawaban_listening'][13]) == 'C'){
-            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&C&&&Benar|||';
-            //         $benar_listening = $benar_listening + 2;
-            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'C' && strtolower($_POST['jawaban_listening'][13]) == 'B'){
-            //         $jawaban_ietls .= 'Listening&&&C&&&Benar|||Listening&&&B&&&Benar|||';
-            //         $benar_listening = $benar_listening + 2;
-            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'C'){
-            //         $jawaban_ietls .= 'Listening&&&C&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
-            //         $benar_listening++;
-            //     } else if(strtolower($_POST['jawaban_listening'][12]) == 'B'){
-            //         $jawaban_ietls .= 'Listening&&&B&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
-            //         $benar_listening++;
-            //     } else if(strtolower($_POST['jawaban_listening'][13]) == 'C'){
-            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&C&&&Benar|||';
-            //         $benar_listening++;
-            //     } else if(strtolower($_POST['jawaban_listening'][13]) == 'B'){
-            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&B&&&Benar|||';
-            //         $benar_listening++;
-            //     } else {
-            //         $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
-            //     }
-            // } else if($i != 10 && $i != 12){
+            if($i == 11){
+                if(strtolower($_POST['jawaban_listening'][10]) == 'b' && strtolower($_POST['jawaban_listening'][11]) == 'e'){
+                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&e&&&Benar|||';
+                    $benar_listening = $benar_listening + 2;
+                } else if(strtolower($_POST['jawaban_listening'][10]) == 'e' && strtolower($_POST['jawaban_listening'][11]) == 'b'){
+                    $jawaban_ietls .= 'Listening&&&e&&&Benar|||Listening&&&b&&&Benar|||';
+                    $benar_listening = $benar_listening + 2;
+                } else if(strtolower($_POST['jawaban_listening'][10]) == 'e'){
+                    $jawaban_ietls .= 'Listening&&&e&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+                    $benar_listening++;
+                } else if(strtolower($_POST['jawaban_listening'][10]) == 'b'){
+                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+                    $benar_listening++;
+                } else if(strtolower($_POST['jawaban_listening'][11]) == 'e'){
+                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&e&&&Benar|||';
+                    $benar_listening++;
+                } else if(strtolower($_POST['jawaban_listening'][11]) == 'b'){
+                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&b&&&Benar|||';
+                    $benar_listening++;
+                } else {
+                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][10])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][11])).'&&&Salah|||';
+                }
+            } else if($i == 13){
+                if(strtolower($_POST['jawaban_listening'][12]) == 'b' && strtolower($_POST['jawaban_listening'][13]) == 'c'){
+                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&c&&&Benar|||';
+                    $benar_listening = $benar_listening + 2;
+                } else if(strtolower($_POST['jawaban_listening'][12]) == 'c' && strtolower($_POST['jawaban_listening'][13]) == 'b'){
+                    $jawaban_ietls .= 'Listening&&&c&&&Benar|||Listening&&&b&&&Benar|||';
+                    $benar_listening = $benar_listening + 2;
+                } else if(strtolower($_POST['jawaban_listening'][12]) == 'c'){
+                    $jawaban_ietls .= 'Listening&&&c&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+                    $benar_listening++;
+                } else if(strtolower($_POST['jawaban_listening'][12]) == 'b'){
+                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+                    $benar_listening++;
+                } else if(strtolower($_POST['jawaban_listening'][13]) == 'c'){
+                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&c&&&Benar|||';
+                    $benar_listening++;
+                } else if(strtolower($_POST['jawaban_listening'][13]) == 'b'){
+                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&b&&&Benar|||';
+                    $benar_listening++;
+                } else {
+                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][12])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $_POST['jawaban_listening'][13])).'&&&Salah|||';
+                }
+            } else if($i != 10 && $i != 12){
                 if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_listening++;
@@ -1668,7 +1671,7 @@ class Soal_model extends CI_Model {
                 }
     
                 $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
-            // }
+            }
         }
 
         $benar_reading = 0;
