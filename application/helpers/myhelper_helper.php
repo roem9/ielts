@@ -259,7 +259,7 @@
 
     // soal ielts 
         function soal_isian_ielts($name){
-            return '<input type="text" class="ps-2 pe-2 form form-control form-control-flush form-autosize" style="background: #DBE7F6 !important;width: 50px;display: inline" name="'.$name.'">';
+            return '<input type="text" class="ps-2 pe-2 form form-control form-control-flush form-autosize" style="background: #DBE7F6 !important;width: 50px;display: inline" name="'.$name.'" autocomplete="off">';
         }
 
         function soal_pg_ielts($data_soal){
