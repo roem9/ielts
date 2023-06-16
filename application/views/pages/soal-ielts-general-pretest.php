@@ -1139,6 +1139,27 @@
         </div>
     </form>
 
+    <!-- tambahan  -->
+    <div class="modal modal-blur fade bg-danger" id="alertModal" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alert</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Leaving the worksheet is not allowed. You'll lose your progress and your test result will be unvalid</p>
+                    <p>You will lose your progress in <span id="count">10</span> seconds</p>
+                </div>
+                <div class="modal-footer">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn me-auto mr-3 btn-primary" data-bs-dismiss="modal">Stay on the Worksheet</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <?php  
         if(isset($js)) :
             foreach ($js as $i => $js) :?>
@@ -1151,6 +1172,8 @@
 <?php $this->load->view("_partials/footer")?>
 
 <script>
+    // tambahan 
+    let start = false;
 
     $("#textarea-1").on('keyup', function(e) {
         var words = $.trim(this.value).length ? this.value.match(/\S+/g).length : 0;
@@ -1210,6 +1233,9 @@
             } else {
                 $("#login").hide();
                 $("#transisi-sesi-1").show();
+
+                // tambahan 
+                start = true;
 
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                     $([document.documentElement, document.body]).animate({
@@ -1585,5 +1611,32 @@
             return false;
         }
     });
+
+    // tambahan 
+    let countdownInterval;
+
+    function showAlertWithCountdown(seconds) {
+        if(start){
+            clearInterval(countdownInterval);
+            $("#count").html(`<b>10</b>`);
+            $("#alertModal").modal('show');
+            countdownInterval = setInterval(() => {
+                $("#count").html(`<b>${seconds}</b>`);
+                seconds--;
+    
+                if(seconds === 0){
+                    clearInterval(countdownInterval);
+                    location.reload();
+                }
+            }, 1000);
+        }
+    }
+
+    function returnWorkSheet() {
+        if(start){
+            // $("#alertModal").modal('hide');
+            clearInterval(countdownInterval);
+        }
+    }
 
 </script>

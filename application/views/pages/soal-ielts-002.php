@@ -1585,7 +1585,7 @@
 
     function returnWorkSheet() {
         if(start){
-            $("#alertModal").modal('hide');
+            // $("#alertModal").modal('hide');
             clearInterval(countdownInterval);
         }
     }
