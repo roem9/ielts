@@ -27,6 +27,20 @@ class Soal extends CI_Controller {
 
         $data['tes'] = $this->Main_model->get_one("tes", ["md5(id_tes)" => $id_tes]);
 
+        $data['reload_page'] = $this->db->query("
+            SELECT
+                *
+            FROM config
+            WHERE field = 'reload_page'
+        ")->row_array();
+
+        $data['time_reload'] = $this->db->query("
+            SELECT
+                *
+            FROM config
+            WHERE field = 'time_reload'
+        ")->row_array();
+
         if($data['tes']){
             $data['title'] = $data['tes']['nama_tes'];
             $data['id'] = $id_tes;
@@ -421,7 +435,11 @@ class Soal extends CI_Controller {
 
         // $msg = 'Thank you for submitting your answer. Your answer will be assessed by our teacher and the report will be processed after three days';
 
-        $this->session->set_flashdata('pesan', $msg);
+        if($msg){
+            $this->session->set_flashdata('pesan', $msg);
+        } else {
+            $this->session->set_flashdata('pesan', 'Thank you for submitting your answer');
+        }
 
         redirect(base_url("soal/id/".$id_tes), $data);
     }

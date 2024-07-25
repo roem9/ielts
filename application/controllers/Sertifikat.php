@@ -12,34 +12,37 @@ class Sertifikat extends CI_Controller {
     }
     
     public function no($id){
-        $peserta = $this->Main_model->get_one("peserta_toefl", ["md5(id)" => $id]);
-        $peserta['link'] = $this->Main_model->get_one("config", ['field' => "web admin"]);
-        if($peserta){
-            $tes = $this->Main_model->get_one("tes", ["id_tes" => $peserta['id_tes']]);
-            $peserta['nama'] = $peserta['nama'];
-            $peserta['title'] = "Sertifikat ".$peserta['nama'];
-            $peserta['t4_lahir'] = ucwords(strtolower($peserta['t4_lahir']));
-            $peserta['hari'] = date('d', strtotime($tes['tgl_tes']));
-            $peserta['tahun'] = date('y', strtotime($tes['tgl_tes']));
-            $peserta['bulan'] = getHurufBulan(date('m', strtotime($tes['tgl_tes'])));
-            $peserta['listening'] = poin("Listening", $peserta['nilai_listening']);
-            $peserta['structure'] = poin("Structure", $peserta['nilai_structure']);
-            $peserta['reading'] = poin("Reading", $peserta['nilai_reading']);
-            $peserta['tgl_tes'] = $tes['tgl_tes'];
-            $peserta['tgl_berakhir'] = date('Y-m-d', strtotime('+1 year', strtotime($tes['tgl_tes'])));
+        // $peserta = $this->Main_model->get_one("peserta_ielts", ["md5(id)" => $id]);
+        $data = $this->db->query("
+            SELECT
+                *
+            FROM peserta_ielts as a 
+            JOIN tes as b ON a.id_tes = b.id_tes
+            WHERE md5(id) = '$id'
+        ")->row_array();
+        if($data){
+            $data['title'] = 'Sertifikat';
+            $data['no_doc'] = $data['no_doc'];
+            $data['hari'] = date('d', strtotime($data['tgl_tes']));
+            $data['tahun'] = date('y', strtotime($data['tgl_tes']));
+            $data['bulan'] = getHurufBulan(date('m', strtotime($data['tgl_tes'])));
 
-            $peserta['link_foto'] = config();
+            $data['skor_listening'] = ielts_listening($data['nilai_listening']);
+            $data['skor_reading'] = ielts_reading($data['nilai_reading'], $data['tipe_tes']);
+            $data['skor_writing'] = $data['nilai_writing'];
+            $data['skor_speaking'] = $data['nilai_speaking'];
+            $data['overall'] = pembulatan_skor_ielts($data['skor_listening'],$data['skor_reading'],$data['skor_writing'],$data['skor_speaking']);
 
-            $skor = ((poin("Listening", $peserta['nilai_listening']) + poin("Structure", $peserta['nilai_structure']) + poin("Reading", $peserta['nilai_reading'])) * 10) / 3;
-            $peserta['skor'] = $skor;
-
-            $peserta['no_doc'] = "T.{$peserta['no_doc']}{$peserta['hari']}{$peserta['bulan']}{$peserta['tahun']}";
+            $data['tgl_tes'] = date('Y-m-d', strtotime($data['tgl_tes']));
         }
 
         // $this->load->view("pages/layout/header-sertifikat", $peserta);
         // $this->load->view("pages/soal/".$page, $data);
-        $peserta['background'] = $this->Main_model->get_one("config", ["field" => 'background']);
-        $this->load->view("pages/sertifikat", $peserta);
+        $background = $this->Main_model->get_one("config", ["field" => 'background']);
+        $data['link'] = $this->Main_model->get_one("config", ['field' => "web admin"]);
+
+        $data['background'] = $background;
+        $this->load->view("pages/sertifikat", $data);
         // $this->load->view("pages/layout/footer");
     }
 }
