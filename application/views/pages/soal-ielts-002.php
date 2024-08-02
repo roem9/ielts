@@ -921,9 +921,7 @@
                         </table>
         
                         <div class="">
-                            <center>
-                                <img src="<?= base_url()?>assets/img/writing-002.jpeg" alt="" height="550px">
-                            </center>
+                            <img src="<?= base_url()?>assets/img/writing-002.jpeg" alt="">
                         </div>
                     </div>
                     <div class="col">
